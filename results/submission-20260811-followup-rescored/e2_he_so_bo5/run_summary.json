@@ -1,0 +1,10 @@
+{
+  "condition": "e2_he_so_bo5",
+  "trials_total": 820,
+  "raw_records": 820,
+  "duplicates_dropped": 0,
+  "n_pass": 472,
+  "pass_rate": 0.57561,
+  "pass_rate_original": 0.57561,
+  "outcomes_flipped": 0
+}

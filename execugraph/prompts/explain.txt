@@ -1,0 +1,33 @@
+You are a programming tutor.
+
+Problem:
+{problem}
+
+Accepted Python Code:
+{code}
+
+This is the plan generated initially 
+{plan}
+
+Explain the solution clearly and simply.
+
+Required structure:
+1. High-level idea
+2. Algorithm steps
+3. Why the algorithm works
+4. Time complexity: [MUST specify, e.g., "O(n)", "O(n log n)", "O(2^n)"]
+5. Space complexity: [MUST specify, e.g., "O(1)", "O(n)", "O(log n)"]
+
+IMPORTANT: 
+- You MUST include time complexity and space complexity in your response
+- Use format: "Time complexity: O(...)" and "Space complexity: O(...)"
+- Analyze the actual code provided to determine complexity
+- For recursion without memoization, typically O(2^n) time and O(n) space
+- For recursion with memoization, typically O(n) time and O(n) space
+
+Rules:
+- Do NOT rewrite or modify the code
+- Do NOT optimize
+- Do NOT judge correctness
+- Assume the code is already correct
+- Keep explanation concise and clear

@@ -1,0 +1,29 @@
+# Two-model variant: Qwen3-4B for non-code agents + Qwen2.5-Coder-7B
+# for code agents. Recommended only on machines with >=12 GB VRAM where
+# both models can stay hot simultaneously. On 6 GB VRAM this incurs a
+# model-swap penalty per problem and is materially slower than the
+# single-backbone configs/default.yaml.
+
+models:
+  planner:
+    provider: ollama
+    model: qwen3:4b-instruct-2507-q4_K_M
+  generator:
+    provider: ollama
+    model: qwen2.5-coder:7b-instruct-q4_K_M
+  reviewer:
+    provider: ollama
+    model: qwen3:4b-instruct-2507-q4_K_M
+  optimizer:
+    provider: ollama
+    model: qwen2.5-coder:7b-instruct-q4_K_M
+  explainer:
+    provider: ollama
+    model: qwen3:4b-instruct-2507-q4_K_M
+
+execution:
+  timeout_s: 5.0
+
+run:
+  n_trials: 5
+  retry_budget: 2

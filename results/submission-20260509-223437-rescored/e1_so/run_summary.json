@@ -1,0 +1,10 @@
+{
+  "condition": "e1_so",
+  "trials_total": 150,
+  "raw_records": 150,
+  "duplicates_dropped": 0,
+  "n_pass": 116,
+  "pass_rate": 0.773333,
+  "pass_rate_original": 0.733333,
+  "outcomes_flipped": 6
+}

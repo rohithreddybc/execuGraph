@@ -1,0 +1,10 @@
+{
+  "condition": "e4_no_planner_n5",
+  "trials_total": 150,
+  "raw_records": 150,
+  "duplicates_dropped": 0,
+  "n_pass": 130,
+  "pass_rate": 0.866667,
+  "pass_rate_original": 0.866667,
+  "outcomes_flipped": 0
+}

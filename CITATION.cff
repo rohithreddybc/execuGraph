@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: >-
+  ExecuGraph: A Multi-Agent, Execution-Grounded Framework for Reliable
+  Backend Code Synthesis with Large Language Models
+message: >-
+  Anonymized for double-blind review. Author and citation metadata will be
+  released on acceptance.
+type: software
+authors:
+  - name: "Anonymous Author(s) (withheld for double-blind review)"
+repository-code: "https://github.com/anonymousreview111/execugraph"
+keywords:
+  - multi-agent systems
+  - large language models
+  - code generation
+  - execution-grounded validation
+  - software reliability
+  - retrieval-augmented generation
+license: Apache-2.0

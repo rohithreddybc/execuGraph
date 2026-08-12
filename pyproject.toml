@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "execugraph"
+version = "0.2.0"
+description = "Multi-agent, execution-grounded backend code synthesis with LLMs."
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+license = {text = "Apache-2.0"}
+authors = [
+  {name = "Anonymous Author(s) (withheld for double-blind review)"},
+]
+dependencies = [
+  "langchain>=0.3,<2",
+  "langchain-core>=0.3,<2",
+  "langgraph>=0.2,<2",
+  "pydantic>=2,<3",
+  "pyyaml>=6",
+  "requests>=2.31",
+  "numpy>=1.24",
+  "scipy>=1.11",
+  "datasets>=2.18",
+  "chromadb>=0.5",
+  "sentence-transformers>=2.7",
+]
+
+[project.optional-dependencies]
+ui = ["streamlit>=1.30", "graphviz>=0.20"]
+hf = ["huggingface-hub>=0.23"]
+dev = ["pytest>=8", "pytest-cov>=5", "ruff>=0.5", "mypy>=1.10"]
+
+[project.scripts]
+execugraph-run = "execugraph.runner.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["execugraph*"]
+exclude = ["tests*", "results*"]
+
+[tool.setuptools.package-data]
+execugraph = ["prompts/*.txt"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q --strict-markers"
+markers = [
+  "integration: tests that need an LLM backend",
+]

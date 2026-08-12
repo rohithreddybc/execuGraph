@@ -1,0 +1,10 @@
+{
+  "condition": "e4_rag_on",
+  "trials_total": 60,
+  "raw_records": 60,
+  "duplicates_dropped": 0,
+  "n_pass": 50,
+  "pass_rate": 0.833333,
+  "pass_rate_original": 0.766667,
+  "outcomes_flipped": 4
+}

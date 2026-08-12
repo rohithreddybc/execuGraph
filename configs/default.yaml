@@ -1,0 +1,43 @@
+# Default ExecuGraph configuration — primary headline backbone.
+#
+# We use Qwen2.5-Coder-7B-Instruct (Sept 2024 release, q4_K_M, ~4.5 GB)
+# as the single shared backbone for all five agent roles. Selected for
+# the headline grid because it:
+#   (i)   fits entirely in 6 GB VRAM with comfortable headroom for KV
+#         cache, so no RAM offload is needed, so no swap penalty;
+#   (ii)  yields ~30-80 s per multi-full trial on the reference RTX 4050,
+#         making the full E1+E4+E5+E2+E3+E7 grid feasible inside a
+#         ~7-hour wall-clock budget;
+#   (iii) is currently (May 2026) the strongest dense 7B-class
+#         code-specialised model.
+#
+# A "latest 2026 SOTA" comparison condition (Qwen3-Coder-30B-A3B-Instruct,
+# released July 2025) is reported separately in the supplementary E9 row
+# of Section V — see configs/latest2026.yaml. We measured Qwen3-Coder:30b
+# at ~270 s/multi-full trial on this hardware (most layers spill to system
+# RAM), so we run it only on a 10-problem sample for the supplementary
+# row rather than the full grid.
+
+models:
+  planner:
+    provider: ollama
+    model: qwen2.5-coder:7b-instruct-q4_K_M
+  generator:
+    provider: ollama
+    model: qwen2.5-coder:7b-instruct-q4_K_M
+  reviewer:
+    provider: ollama
+    model: qwen2.5-coder:7b-instruct-q4_K_M
+  optimizer:
+    provider: ollama
+    model: qwen2.5-coder:7b-instruct-q4_K_M
+  explainer:
+    provider: ollama
+    model: qwen2.5-coder:7b-instruct-q4_K_M
+
+execution:
+  timeout_s: 5.0
+
+run:
+  n_trials: 5
+  retry_budget: 2

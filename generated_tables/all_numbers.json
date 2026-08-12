@@ -1,0 +1,406 @@
+{
+  "runs": {
+    "e1_so": {
+      "trials": 150,
+      "pass_rate": 77.33333333333333
+    },
+    "e1_sr": {
+      "trials": 150,
+      "pass_rate": 90.0
+    },
+    "e1_mf": {
+      "trials": 150,
+      "pass_rate": 82.0
+    },
+    "e2_he_so": {
+      "trials": 64,
+      "pass_rate": 56.25
+    },
+    "e2_he_mf": {
+      "trials": 64,
+      "pass_rate": 85.9375
+    },
+    "e3_apps_so": {
+      "trials": 50,
+      "pass_rate": 20.0
+    },
+    "e3_apps_mf": {
+      "trials": 50,
+      "pass_rate": 22.0
+    },
+    "e4_no_planner": {
+      "trials": 60,
+      "pass_rate": 86.66666666666667
+    },
+    "e4_no_reviewer": {
+      "trials": 60,
+      "pass_rate": 83.33333333333333
+    },
+    "e4_no_optimizer": {
+      "trials": 60,
+      "pass_rate": 83.33333333333333
+    },
+    "e4_rag_on": {
+      "trials": 60,
+      "pass_rate": 83.33333333333333
+    },
+    "e5_rb0": {
+      "trials": 60,
+      "pass_rate": 76.66666666666667
+    },
+    "e5_rb2": {
+      "trials": 60,
+      "pass_rate": 83.33333333333333
+    },
+    "e7_xm_so": {
+      "trials": 60,
+      "pass_rate": 83.33333333333333
+    },
+    "e7_xm_mf": {
+      "trials": 60,
+      "pass_rate": 83.33333333333333
+    },
+    "e9_l26_so": {
+      "trials": 10,
+      "pass_rate": 90.0
+    },
+    "e9_l26_mf": {
+      "trials": 10,
+      "pass_rate": 90.0
+    },
+    "e2_he_sr": {
+      "trials": 164,
+      "pass_rate": 81.70731707317073
+    },
+    "e3_apps_sr": {
+      "trials": 50,
+      "pass_rate": 24.0
+    },
+    "e7_xm_sr": {
+      "trials": 60,
+      "pass_rate": 86.66666666666667
+    },
+    "e5_rb1": {
+      "trials": 60,
+      "pass_rate": 71.66666666666667
+    },
+    "e2_he_so_164": {
+      "trials": 164,
+      "pass_rate": 56.09756097560975
+    },
+    "e2_he_mf_164": {
+      "trials": 164,
+      "pass_rate": 80.48780487804878
+    },
+    "e4_no_planner_n5": {
+      "trials": 150,
+      "pass_rate": 86.66666666666667
+    },
+    "e4_no_reviewer_n5": {
+      "trials": 150,
+      "pass_rate": 78.66666666666667
+    },
+    "e4_no_optimizer_n5": {
+      "trials": 150,
+      "pass_rate": 78.66666666666667
+    },
+    "e4_rag_on_n5": {
+      "trials": 150,
+      "pass_rate": 78.66666666666667
+    },
+    "e2_he_so_bo5": {
+      "trials": 820,
+      "pass_rate": 57.5609756097561
+    }
+  },
+  "category": {
+    "DP": {
+      "SO": 90.0,
+      "SR": 90.0,
+      "MF": 88.0,
+      "p_SO_MF": 1.0,
+      "p_SR_MF": 1.0
+    },
+    "GRAPH": {
+      "SO": 60.0,
+      "SR": 80.0,
+      "MF": 72.0,
+      "p_SO_MF": 0.625,
+      "p_SR_MF": 0.625
+    },
+    "DS": {
+      "SO": 82.0,
+      "SR": 100.0,
+      "MF": 86.0,
+      "p_SO_MF": 1.0,
+      "p_SR_MF": 0.5
+    }
+  },
+  "pooled": {
+    "SO": 77.33333333333333,
+    "SR": 90.0,
+    "MF": 82.0
+  },
+  "cost": {
+    "single-oneshot": {
+      "wallclock_mean": 7.576275999999998,
+      "wallclock_median": 7.279,
+      "tokens_mean": 312.87333333333333,
+      "llm_calls_mean": 1.0
+    },
+    "single-retry": {
+      "wallclock_mean": 13.280749333333333,
+      "wallclock_median": 8.0724,
+      "tokens_mean": 506.7133333333333,
+      "llm_calls_mean": 1.4666666666666666
+    },
+    "multi-full": {
+      "wallclock_mean": 59.793004,
+      "wallclock_median": 56.2522,
+      "tokens_mean": 3709.766666666667,
+      "llm_calls_mean": 5.3
+    }
+  },
+  "ablation": {
+    "Multi-Full (baseline)": {
+      "DP": 88.0,
+      "GRAPH": 72.0,
+      "DS": 86.0,
+      "Overall": 82.0
+    },
+    "$-$Planner": {
+      "DP": 90.0,
+      "GRAPH": 80.0,
+      "DS": 90.0,
+      "Overall": 86.66666666666667
+    },
+    "$-$Reviewer$^{\\ast}$": {
+      "DP": 90.0,
+      "GRAPH": 64.0,
+      "DS": 82.0,
+      "Overall": 78.66666666666667
+    },
+    "$-$Optimizer$^{\\ast}$": {
+      "DP": 90.0,
+      "GRAPH": 64.0,
+      "DS": 82.0,
+      "Overall": 78.66666666666667
+    },
+    "$+$RAG$^{\\ast}$": {
+      "DP": 90.0,
+      "GRAPH": 64.0,
+      "DS": 82.0,
+      "Overall": 78.66666666666667
+    }
+  },
+  "replication": {
+    "runs": {
+      "e1_mf": 82.0,
+      "e4_no_reviewer_n5": 78.66666666666667,
+      "e4_no_optimizer_n5": 78.66666666666667,
+      "e4_rag_on_n5": 78.66666666666667
+    },
+    "mean": 79.50000000000001,
+    "sd": 1.6666666666666643,
+    "same_session_mean": 78.66666666666667,
+    "same_session_sd": 0.0,
+    "planner": 86.66666666666667,
+    "planner_vs_same_session_pp": 8.0,
+    "planner_vs_all_reps_pp": 7.166666666666657,
+    "planner_paired_vs_pooled": {
+      "n": 30,
+      "discordant": 6,
+      "delta_pp": 7.166666666666669,
+      "ci_lo": -0.6666666666666662,
+      "ci_hi": 16.333333333333336,
+      "p_exact": 0.15625
+    }
+  },
+  "retry": {
+    "0 (multi-no-retry)": {
+      "pass": 76.66666666666667,
+      "retries": 0.0,
+      "wallclock": 41.227105000000016,
+      "tokens": 3340.9
+    },
+    "1": {
+      "pass": 71.66666666666667,
+      "retries": 0.2833333333333333,
+      "wallclock": 53.407528333333325,
+      "tokens": 3375.0333333333333
+    },
+    "2 (multi-full)": {
+      "pass": 83.33333333333333,
+      "retries": 0.5,
+      "wallclock": 44.778761666666675,
+      "tokens": 3669.65
+    }
+  },
+  "external": {
+    "HumanEval (164)": {
+      "SO": 56.09756097560975,
+      "SR": 81.70731707317073,
+      "MF": 80.48780487804878
+    },
+    "APPS-intro (50)": {
+      "SO": 20.0,
+      "SR": 24.0,
+      "MF": 22.0
+    }
+  },
+  "humaneval_paired": {
+    "SR $-$ SO": {
+      "n": 164,
+      "discordant": 42,
+      "delta_pp": 25.609756097560975,
+      "ci_lo": 18.902439024390244,
+      "ci_hi": 32.31707317073171,
+      "p_exact": 4.547473508864641e-13,
+      "p_holm": 1.3642420526593924e-12
+    },
+    "MF $-$ SO": {
+      "n": 164,
+      "discordant": 64,
+      "delta_pp": 24.390243902439025,
+      "ci_lo": 15.24390243902439,
+      "ci_hi": 32.926829268292686,
+      "p_exact": 5.680122604712068e-06,
+      "p_holm": 1.1360245209424136e-05
+    },
+    "MF $-$ SR": {
+      "n": 164,
+      "discordant": 28,
+      "delta_pp": -1.2195121951219512,
+      "ci_lo": -7.317073170731707,
+      "ci_hi": 4.878048780487805,
+      "p_exact": 0.7621389999985695,
+      "p_holm": 0.7621389999985695
+    }
+  },
+  "sampling_control": {
+    "problems": 164,
+    "samples_per_problem": 5,
+    "pass_at_1": 57.5609756097561,
+    "best_of_5": 57.926829268292686,
+    "delta_pp": 0.3658536585365866,
+    "unanimous_problems": 161,
+    "unanimous_frac": 98.17073170731707
+  },
+  "crossmodel": {
+    "Qwen2.5-Coder-7B-SO": {
+      "DP": 90.0,
+      "GRAPH": 60.0,
+      "DS": 82.0,
+      "All": 77.33333333333333
+    },
+    "Qwen2.5-Coder-7B-SR": {
+      "DP": 90.0,
+      "GRAPH": 80.0,
+      "DS": 100.0,
+      "All": 90.0
+    },
+    "Qwen2.5-Coder-7B-MF": {
+      "DP": 88.0,
+      "GRAPH": 72.0,
+      "DS": 86.0,
+      "All": 82.0
+    },
+    "DeepSeek-V2-Lite-SO": {
+      "DP": 90.0,
+      "GRAPH": 70.0,
+      "DS": 90.0,
+      "All": 83.33333333333333
+    },
+    "DeepSeek-V2-Lite-SR": {
+      "DP": 90.0,
+      "GRAPH": 70.0,
+      "DS": 100.0,
+      "All": 86.66666666666667
+    },
+    "DeepSeek-V2-Lite-MF": {
+      "DP": 80.0,
+      "GRAPH": 90.0,
+      "DS": 80.0,
+      "All": 83.33333333333333
+    }
+  },
+  "errortax": {
+    "syntax": {
+      "SO": 0.0,
+      "SR": 0.0,
+      "MF": 0.0
+    },
+    "runtime": {
+      "SO": 41.1764705882353,
+      "SR": 0.0,
+      "MF": 18.51851851851852
+    },
+    "timeout": {
+      "SO": 0.0,
+      "SR": 0.0,
+      "MF": 0.0
+    },
+    "wrong_answer": {
+      "SO": 58.8235294117647,
+      "SR": 100.0,
+      "MF": 81.48148148148148
+    },
+    "sandbox_violation": {
+      "SO": 0.0,
+      "SR": 0.0,
+      "MF": 0.0
+    },
+    "harness_error": {
+      "SO": 0.0,
+      "SR": 0.0,
+      "MF": 0.0
+    }
+  },
+  "test_sources_observed": [
+    "deterministic"
+  ],
+  "total_trials": 3260,
+  "latest2026": {
+    "Single-Oneshot": {
+      "pass": 90.0,
+      "n": 10,
+      "wallclock": 72.92546,
+      "tokens": 271.1
+    },
+    "Multi-Full": {
+      "pass": 90.0,
+      "n": 10,
+      "wallclock": 452.37978999999996,
+      "tokens": 3376.0
+    }
+  },
+  "paired": {
+    "SR $-$ SO": {
+      "n": 30,
+      "discordant": 4,
+      "delta_pp": 12.666666666666664,
+      "ci_lo": 2.666666666666667,
+      "ci_hi": 25.33333333333333,
+      "p_exact": 0.125,
+      "p_holm": 0.375
+    },
+    "MF $-$ SO": {
+      "n": 30,
+      "discordant": 8,
+      "delta_pp": 4.666666666666667,
+      "ci_lo": -6.666666666666667,
+      "ci_hi": 16.666666666666664,
+      "p_exact": 0.546875,
+      "p_holm": 0.546875
+    },
+    "MF $-$ SR": {
+      "n": 30,
+      "discordant": 7,
+      "delta_pp": -7.999999999999999,
+      "ci_lo": -18.666666666666664,
+      "ci_hi": 0.6666666666666669,
+      "p_exact": 0.15625,
+      "p_holm": 0.375
+    }
+  }
+}

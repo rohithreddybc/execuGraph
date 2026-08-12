@@ -1,0 +1,1045 @@
+=== run id: submission-20260509-223437 ===
+    config: /c/Users/rohit/Documents/Research Papers/Researchpaper_4/_repo_clone/configs/default.yaml
+    keep-alive: 30m
+
+C:\Users\rohit\anaconda3\Lib\site-packages\langgraph\cache\base\__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+[skip] e1_so already complete (pass_rate=0.733). Remove run_summary.json to re-run.
+C:\Users\rohit\anaconda3\Lib\site-packages\langgraph\cache\base\__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+[skip] e1_sr already complete (pass_rate=0.833). Remove run_summary.json to re-run.
+C:\Users\rohit\anaconda3\Lib\site-packages\langgraph\cache\base\__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+[skip] e1_mf already complete (pass_rate=0.767). Remove run_summary.json to re-run.
+C:\Users\rohit\anaconda3\Lib\site-packages\langgraph\cache\base\__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+loaded 30 problems from internal30
+[resume] 40 trial(s) already logged — skipping.
+[41/60] multi-full lru_cache t0 -> passed=True err=none wc=39.3s
+[42/60] multi-full lru_cache t1 -> passed=True err=none wc=34.0s
+[43/60] multi-full min_stack t0 -> passed=True err=none wc=44.5s
+[44/60] multi-full min_stack t1 -> passed=True err=none wc=40.4s
+[45/60] multi-full stack_using_queue t0 -> passed=True err=none wc=33.4s
+[46/60] multi-full stack_using_queue t1 -> passed=True err=none wc=32.1s
+[47/60] multi-full reverse_linked_list t0 -> passed=True err=none wc=28.0s
+[48/60] multi-full reverse_linked_list t1 -> passed=True err=none wc=27.7s
+[49/60] multi-full binary_tree_traversal t0 -> passed=True err=none wc=30.6s
+[50/60] multi-full binary_tree_traversal t1 -> passed=True err=none wc=26.5s
+[51/60] multi-full priority_queue t0 -> passed=False err=sandbox_violation wc=34.1s
+[52/60] multi-full priority_queue t1 -> passed=False err=sandbox_violation wc=31.2s
+[53/60] multi-full heapify t0 -> passed=True err=none wc=31.7s
+[54/60] multi-full heapify t1 -> passed=True err=none wc=33.6s
+[55/60] multi-full avl t0 -> passed=False err=runtime wc=57.0s
+[56/60] multi-full avl t1 -> passed=False err=runtime wc=57.3s
+[57/60] multi-full adj_list_construct t0 -> passed=True err=none wc=27.4s
+[58/60] multi-full adj_list_construct t1 -> passed=True err=none wc=25.9s
+[59/60] multi-full valid_parentheses t0 -> passed=True err=none wc=28.7s
+[60/60] multi-full valid_parentheses t1 -> passed=True err=none wc=27.5s
+
+=== summary ===
+  pass_rate: 0.800
+  total: 60
+C:\Users\rohit\anaconda3\Lib\site-packages\langgraph\cache\base\__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+loaded 30 problems from internal30
+[1/60] multi-full fib t0 -> passed=True err=none wc=29.5s
+[2/60] multi-full fib t1 -> passed=True err=none wc=30.1s
+[3/60] multi-full climb_stairs t0 -> passed=True err=none wc=35.3s
+[4/60] multi-full climb_stairs t1 -> passed=True err=none wc=41.7s
+[5/60] multi-full coin_change t0 -> passed=True err=none wc=39.2s
+[6/60] multi-full coin_change t1 -> passed=True err=none wc=37.6s
+[7/60] multi-full lcs t0 -> passed=True err=none wc=44.2s
+[8/60] multi-full lcs t1 -> passed=True err=none wc=39.2s
+[9/60] multi-full house_robber t0 -> passed=True err=none wc=39.8s
+[10/60] multi-full house_robber t1 -> passed=True err=none wc=35.3s
+[11/60] multi-full min_cost_path t0 -> passed=True err=none wc=39.9s
+[12/60] multi-full min_cost_path t1 -> passed=True err=none wc=43.2s
+[13/60] multi-full lis t0 -> passed=False err=sandbox_violation wc=32.2s
+[14/60] multi-full lis t1 -> passed=False err=sandbox_violation wc=35.4s
+[15/60] multi-full rod_cutting t0 -> passed=True err=none wc=37.2s
+[16/60] multi-full rod_cutting t1 -> passed=True err=none wc=34.7s
+[17/60] multi-full matrix_chain t0 -> passed=False err=wrong_answer wc=35.8s
+[18/60] multi-full matrix_chain t1 -> passed=False err=wrong_answer wc=39.5s
+[19/60] multi-full subset_sum t0 -> passed=True err=none wc=35.2s
+[20/60] multi-full subset_sum t1 -> passed=True err=none wc=36.8s
+[21/60] multi-full topo_sort t0 -> passed=True err=none wc=41.3s
+[22/60] multi-full topo_sort t1 -> passed=True err=none wc=41.9s
+[23/60] multi-full cycle_detect t0 -> passed=True err=none wc=36.3s
+[24/60] multi-full cycle_detect t1 -> passed=False err=wrong_answer wc=36.9s
+[25/60] multi-full bfs t0 -> passed=True err=none wc=35.7s
+[26/60] multi-full bfs t1 -> passed=True err=none wc=42.0s
+[27/60] multi-full dfs t0 -> passed=True err=none wc=33.1s
+[28/60] multi-full dfs t1 -> passed=True err=none wc=33.0s
+[29/60] multi-full dijkstra t0 -> passed=False err=sandbox_violation wc=39.2s
+[30/60] multi-full dijkstra t1 -> passed=False err=sandbox_violation wc=39.0s
+[31/60] multi-full bellman_ford t0 -> passed=True err=none wc=38.2s
+[32/60] multi-full bellman_ford t1 -> passed=True err=none wc=36.0s
+[33/60] multi-full connected_components t0 -> passed=True err=none wc=37.0s
+[34/60] multi-full connected_components t1 -> passed=True err=none wc=33.1s
+[35/60] multi-full scc t0 -> passed=True err=none wc=51.5s
+[36/60] multi-full scc t1 -> passed=True err=none wc=43.8s
+[37/60] multi-full unweighted_shortest t0 -> passed=True err=none wc=37.7s
+[38/60] multi-full unweighted_shortest t1 -> passed=False err=wrong_answer wc=39.9s
+[39/60] multi-full grid_shortest_path t0 -> passed=False err=wrong_answer wc=44.1s
+[40/60] multi-full grid_shortest_path t1 -> passed=False err=wrong_answer wc=43.2s
+[41/60] multi-full lru_cache t0 -> passed=True err=none wc=54.0s
+[42/60] multi-full lru_cache t1 -> passed=True err=none wc=53.7s
+[43/60] multi-full min_stack t0 -> passed=False err=wrong_answer wc=39.3s
+[44/60] multi-full min_stack t1 -> passed=False err=wrong_answer wc=40.2s
+[45/60] multi-full stack_using_queue t0 -> passed=True err=none wc=42.9s
+[46/60] multi-full stack_using_queue t1 -> passed=True err=none wc=44.4s
+[47/60] multi-full reverse_linked_list t0 -> passed=True err=none wc=35.2s
+[48/60] multi-full reverse_linked_list t1 -> passed=True err=none wc=33.9s
+[49/60] multi-full binary_tree_traversal t0 -> passed=True err=none wc=29.8s
+[50/60] multi-full binary_tree_traversal t1 -> passed=True err=none wc=31.9s
+[51/60] multi-full priority_queue t0 -> passed=True err=none wc=50.3s
+[52/60] multi-full priority_queue t1 -> passed=True err=none wc=51.0s
+[53/60] multi-full heapify t0 -> passed=True err=none wc=36.6s
+[54/60] multi-full heapify t1 -> passed=True err=none wc=34.7s
+[55/60] multi-full avl t0 -> passed=False err=runtime wc=56.9s
+[56/60] multi-full avl t1 -> passed=False err=runtime wc=59.3s
+[57/60] multi-full adj_list_construct t0 -> passed=True err=none wc=33.6s
+[58/60] multi-full adj_list_construct t1 -> passed=True err=none wc=34.1s
+[59/60] multi-full valid_parentheses t0 -> passed=True err=none wc=35.4s
+[60/60] multi-full valid_parentheses t1 -> passed=True err=none wc=35.5s
+
+=== summary ===
+  pass_rate: 0.767
+  total: 60
+C:\Users\rohit\anaconda3\Lib\site-packages\langgraph\cache\base\__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+loaded 30 problems from internal30
+[1/60] multi-full fib t0 -> passed=True err=none wc=28.5s
+[2/60] multi-full fib t1 -> passed=True err=none wc=28.9s
+[3/60] multi-full climb_stairs t0 -> passed=True err=none wc=34.4s
+[4/60] multi-full climb_stairs t1 -> passed=True err=none wc=40.9s
+[5/60] multi-full coin_change t0 -> passed=True err=none wc=37.1s
+[6/60] multi-full coin_change t1 -> passed=True err=none wc=35.9s
+[7/60] multi-full lcs t0 -> passed=True err=none wc=41.5s
+[8/60] multi-full lcs t1 -> passed=True err=none wc=36.0s
+[9/60] multi-full house_robber t0 -> passed=True err=none wc=37.4s
+[10/60] multi-full house_robber t1 -> passed=True err=none wc=34.4s
+[11/60] multi-full min_cost_path t0 -> passed=True err=none wc=38.2s
+[12/60] multi-full min_cost_path t1 -> passed=True err=none wc=39.3s
+[13/60] multi-full lis t0 -> passed=False err=sandbox_violation wc=40.1s
+[14/60] multi-full lis t1 -> passed=False err=sandbox_violation wc=44.0s
+[15/60] multi-full rod_cutting t0 -> passed=True err=none wc=36.6s
+[16/60] multi-full rod_cutting t1 -> passed=True err=none wc=34.9s
+[17/60] multi-full matrix_chain t0 -> passed=False err=wrong_answer wc=44.2s
+[18/60] multi-full matrix_chain t1 -> passed=False err=wrong_answer wc=48.4s
+[19/60] multi-full subset_sum t0 -> passed=True err=none wc=34.2s
+[20/60] multi-full subset_sum t1 -> passed=True err=none wc=35.9s
+[21/60] multi-full topo_sort t0 -> passed=True err=none wc=38.1s
+[22/60] multi-full topo_sort t1 -> passed=True err=none wc=38.8s
+[23/60] multi-full cycle_detect t0 -> passed=True err=none wc=35.5s
+[24/60] multi-full cycle_detect t1 -> passed=False err=wrong_answer wc=45.0s
+[25/60] multi-full bfs t0 -> passed=True err=none wc=36.4s
+[26/60] multi-full bfs t1 -> passed=True err=none wc=46.3s
+[27/60] multi-full dfs t0 -> passed=True err=none wc=32.1s
+[28/60] multi-full dfs t1 -> passed=True err=none wc=32.2s
+[29/60] multi-full dijkstra t0 -> passed=False err=sandbox_violation wc=48.4s
+[30/60] multi-full dijkstra t1 -> passed=False err=sandbox_violation wc=47.5s
+[31/60] multi-full bellman_ford t0 -> passed=True err=none wc=37.6s
+[32/60] multi-full bellman_ford t1 -> passed=True err=none wc=37.2s
+[33/60] multi-full connected_components t0 -> passed=True err=none wc=35.3s
+[34/60] multi-full connected_components t1 -> passed=True err=none wc=33.3s
+[35/60] multi-full scc t0 -> passed=True err=none wc=50.0s
+[36/60] multi-full scc t1 -> passed=True err=none wc=38.1s
+[37/60] multi-full unweighted_shortest t0 -> passed=True err=none wc=38.2s
+[38/60] multi-full unweighted_shortest t1 -> passed=False err=wrong_answer wc=49.8s
+[39/60] multi-full grid_shortest_path t0 -> passed=False err=wrong_answer wc=53.6s
+[40/60] multi-full grid_shortest_path t1 -> passed=False err=wrong_answer wc=51.6s
+[41/60] multi-full lru_cache t0 -> passed=True err=none wc=47.6s
+[42/60] multi-full lru_cache t1 -> passed=True err=none wc=47.7s
+[43/60] multi-full min_stack t0 -> passed=False err=wrong_answer wc=48.0s
+[44/60] multi-full min_stack t1 -> passed=False err=wrong_answer wc=48.5s
+[45/60] multi-full stack_using_queue t0 -> passed=True err=none wc=43.0s
+[46/60] multi-full stack_using_queue t1 -> passed=True err=none wc=44.0s
+[47/60] multi-full reverse_linked_list t0 -> passed=True err=none wc=32.5s
+[48/60] multi-full reverse_linked_list t1 -> passed=True err=none wc=31.5s
+[49/60] multi-full binary_tree_traversal t0 -> passed=True err=none wc=28.5s
+[50/60] multi-full binary_tree_traversal t1 -> passed=True err=none wc=33.6s
+[51/60] multi-full priority_queue t0 -> passed=True err=none wc=42.0s
+[52/60] multi-full priority_queue t1 -> passed=True err=none wc=42.7s
+[53/60] multi-full heapify t0 -> passed=True err=none wc=33.6s
+[54/60] multi-full heapify t1 -> passed=True err=none wc=32.1s
+[55/60] multi-full avl t0 -> passed=False err=runtime wc=66.1s
+[56/60] multi-full avl t1 -> passed=False err=runtime wc=68.6s
+[57/60] multi-full adj_list_construct t0 -> passed=True err=none wc=30.8s
+[58/60] multi-full adj_list_construct t1 -> passed=True err=none wc=33.2s
+[59/60] multi-full valid_parentheses t0 -> passed=True err=none wc=34.6s
+[60/60] multi-full valid_parentheses t1 -> passed=True err=none wc=34.4s
+
+=== summary ===
+  pass_rate: 0.767
+  total: 60
+C:\Users\rohit\anaconda3\Lib\site-packages\langgraph\cache\base\__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+loaded 30 problems from internal30
+[1/60] multi-full fib t0 -> passed=True err=none wc=33.2s
+[2/60] multi-full fib t1 -> passed=True err=none wc=33.7s
+[3/60] multi-full climb_stairs t0 -> passed=True err=none wc=39.3s
+[4/60] multi-full climb_stairs t1 -> passed=True err=none wc=46.0s
+[5/60] multi-full coin_change t0 -> passed=True err=none wc=43.5s
+[6/60] multi-full coin_change t1 -> passed=True err=none wc=41.7s
+[7/60] multi-full lcs t0 -> passed=True err=none wc=48.3s
+[8/60] multi-full lcs t1 -> passed=True err=none wc=43.4s
+[9/60] multi-full house_robber t0 -> passed=True err=none wc=43.4s
+[10/60] multi-full house_robber t1 -> passed=True err=none wc=39.6s
+[11/60] multi-full min_cost_path t0 -> passed=True err=none wc=44.1s
+[12/60] multi-full min_cost_path t1 -> passed=True err=none wc=46.3s
+[13/60] multi-full lis t0 -> passed=False err=sandbox_violation wc=40.3s
+[14/60] multi-full lis t1 -> passed=False err=sandbox_violation wc=43.6s
+[15/60] multi-full rod_cutting t0 -> passed=True err=none wc=41.8s
+[16/60] multi-full rod_cutting t1 -> passed=True err=none wc=39.8s
+[17/60] multi-full matrix_chain t0 -> passed=False err=wrong_answer wc=44.4s
+[18/60] multi-full matrix_chain t1 -> passed=False err=wrong_answer wc=48.0s
+[19/60] multi-full subset_sum t0 -> passed=True err=none wc=39.3s
+[20/60] multi-full subset_sum t1 -> passed=True err=none wc=40.7s
+[21/60] multi-full topo_sort t0 -> passed=True err=none wc=46.2s
+[22/60] multi-full topo_sort t1 -> passed=True err=none wc=46.6s
+[23/60] multi-full cycle_detect t0 -> passed=True err=none wc=40.1s
+[24/60] multi-full cycle_detect t1 -> passed=False err=wrong_answer wc=44.7s
+[25/60] multi-full bfs t0 -> passed=True err=none wc=41.8s
+[26/60] multi-full bfs t1 -> passed=True err=none wc=51.7s
+[27/60] multi-full dfs t0 -> passed=True err=none wc=37.3s
+[28/60] multi-full dfs t1 -> passed=True err=none wc=37.9s
+[29/60] multi-full dijkstra t0 -> passed=False err=sandbox_violation wc=48.2s
+[30/60] multi-full dijkstra t1 -> passed=False err=sandbox_violation wc=47.4s
+[31/60] multi-full bellman_ford t0 -> passed=True err=none wc=42.6s
+[32/60] multi-full bellman_ford t1 -> passed=True err=none wc=40.9s
+[33/60] multi-full connected_components t0 -> passed=True err=none wc=41.2s
+[34/60] multi-full connected_components t1 -> passed=True err=none wc=37.3s
+[35/60] multi-full scc t0 -> passed=True err=none wc=60.0s
+[36/60] multi-full scc t1 -> passed=True err=none wc=47.5s
+[37/60] multi-full unweighted_shortest t0 -> passed=True err=none wc=42.9s
+[38/60] multi-full unweighted_shortest t1 -> passed=False err=wrong_answer wc=49.0s
+[39/60] multi-full grid_shortest_path t0 -> passed=False err=wrong_answer wc=53.5s
+[40/60] multi-full grid_shortest_path t1 -> passed=False err=wrong_answer wc=51.1s
+[41/60] multi-full lru_cache t0 -> passed=True err=none wc=59.1s
+[42/60] multi-full lru_cache t1 -> passed=True err=none wc=59.4s
+[43/60] multi-full min_stack t0 -> passed=False err=wrong_answer wc=48.4s
+[44/60] multi-full min_stack t1 -> passed=False err=wrong_answer wc=48.4s
+[45/60] multi-full stack_using_queue t0 -> passed=True err=none wc=48.3s
+[46/60] multi-full stack_using_queue t1 -> passed=True err=none wc=49.3s
+[47/60] multi-full reverse_linked_list t0 -> passed=True err=none wc=38.9s
+[48/60] multi-full reverse_linked_list t1 -> passed=True err=none wc=37.5s
+[49/60] multi-full binary_tree_traversal t0 -> passed=True err=none wc=33.5s
+[50/60] multi-full binary_tree_traversal t1 -> passed=True err=none wc=35.6s
+[51/60] multi-full priority_queue t0 -> passed=True err=none wc=54.1s
+[52/60] multi-full priority_queue t1 -> passed=True err=none wc=54.5s
+[53/60] multi-full heapify t0 -> passed=True err=none wc=40.5s
+[54/60] multi-full heapify t1 -> passed=True err=none wc=39.0s
+[55/60] multi-full avl t0 -> passed=False err=runtime wc=66.2s
+[56/60] multi-full avl t1 -> passed=False err=runtime wc=68.5s
+[57/60] multi-full adj_list_construct t0 -> passed=True err=none wc=37.8s
+[58/60] multi-full adj_list_construct t1 -> passed=True err=none wc=38.5s
+[59/60] multi-full valid_parentheses t0 -> passed=True err=none wc=39.6s
+[60/60] multi-full valid_parentheses t1 -> passed=True err=none wc=39.1s
+
+=== summary ===
+  pass_rate: 0.767
+  total: 60
+C:\Users\rohit\anaconda3\Lib\site-packages\langgraph\cache\base\__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+loaded 30 problems from internal30
+[1/60] multi-full fib t0 -> passed=True err=none wc=32.7s
+[2/60] multi-full fib t1 -> passed=True err=none wc=33.7s
+[3/60] multi-full climb_stairs t0 -> passed=True err=none wc=39.3s
+[4/60] multi-full climb_stairs t1 -> passed=True err=none wc=45.8s
+[5/60] multi-full coin_change t0 -> passed=True err=none wc=43.3s
+[6/60] multi-full coin_change t1 -> passed=True err=none wc=41.9s
+[7/60] multi-full lcs t0 -> passed=True err=none wc=47.9s
+[8/60] multi-full lcs t1 -> passed=True err=none wc=43.4s
+[9/60] multi-full house_robber t0 -> passed=True err=none wc=44.0s
+[10/60] multi-full house_robber t1 -> passed=True err=none wc=39.6s
+[11/60] multi-full min_cost_path t0 -> passed=True err=none wc=44.1s
+[12/60] multi-full min_cost_path t1 -> passed=True err=none wc=46.8s
+[13/60] multi-full lis t0 -> passed=False err=runtime wc=30.9s
+[14/60] multi-full lis t1 -> passed=False err=runtime wc=34.2s
+[15/60] multi-full rod_cutting t0 -> passed=True err=none wc=42.0s
+[16/60] multi-full rod_cutting t1 -> passed=True err=none wc=39.8s
+[17/60] multi-full matrix_chain t0 -> passed=False err=wrong_answer wc=33.0s
+[18/60] multi-full matrix_chain t1 -> passed=False err=wrong_answer wc=36.7s
+[19/60] multi-full subset_sum t0 -> passed=True err=none wc=39.3s
+[20/60] multi-full subset_sum t1 -> passed=True err=none wc=40.9s
+[21/60] multi-full topo_sort t0 -> passed=True err=none wc=46.0s
+[22/60] multi-full topo_sort t1 -> passed=True err=none wc=46.7s
+[23/60] multi-full cycle_detect t0 -> passed=True err=none wc=40.4s
+[24/60] multi-full cycle_detect t1 -> passed=False err=wrong_answer wc=34.4s
+[25/60] multi-full bfs t0 -> passed=True err=none wc=42.0s
+[26/60] multi-full bfs t1 -> passed=False err=wrong_answer wc=36.5s
+[27/60] multi-full dfs t0 -> passed=True err=none wc=37.7s
+[28/60] multi-full dfs t1 -> passed=True err=none wc=37.6s
+[29/60] multi-full dijkstra t0 -> passed=False err=sandbox_violation wc=38.3s
+[30/60] multi-full dijkstra t1 -> passed=False err=sandbox_violation wc=37.2s
+[31/60] multi-full bellman_ford t0 -> passed=True err=none wc=42.9s
+[32/60] multi-full bellman_ford t1 -> passed=True err=none wc=41.0s
+[33/60] multi-full connected_components t0 -> passed=True err=none wc=41.0s
+[34/60] multi-full connected_components t1 -> passed=True err=none wc=37.3s
+[35/60] multi-full scc t0 -> passed=False err=wrong_answer wc=32.8s
+[36/60] multi-full scc t1 -> passed=True err=none wc=47.7s
+[37/60] multi-full unweighted_shortest t0 -> passed=True err=none wc=42.8s
+[38/60] multi-full unweighted_shortest t1 -> passed=False err=wrong_answer wc=39.6s
+[39/60] multi-full grid_shortest_path t0 -> passed=False err=wrong_answer wc=40.8s
+[40/60] multi-full grid_shortest_path t1 -> passed=False err=wrong_answer wc=37.1s
+[41/60] multi-full lru_cache t0 -> passed=True err=none wc=59.3s
+[42/60] multi-full lru_cache t1 -> passed=True err=none wc=59.4s
+[43/60] multi-full min_stack t0 -> passed=False err=wrong_answer wc=38.4s
+[44/60] multi-full min_stack t1 -> passed=False err=wrong_answer wc=37.4s
+[45/60] multi-full stack_using_queue t0 -> passed=True err=none wc=48.3s
+[46/60] multi-full stack_using_queue t1 -> passed=True err=none wc=49.2s
+[47/60] multi-full reverse_linked_list t0 -> passed=True err=none wc=39.0s
+[48/60] multi-full reverse_linked_list t1 -> passed=True err=none wc=37.5s
+[49/60] multi-full binary_tree_traversal t0 -> passed=True err=none wc=33.2s
+[50/60] multi-full binary_tree_traversal t1 -> passed=True err=none wc=35.4s
+[51/60] multi-full priority_queue t0 -> passed=True err=none wc=54.1s
+[52/60] multi-full priority_queue t1 -> passed=True err=none wc=54.7s
+[53/60] multi-full heapify t0 -> passed=True err=none wc=40.3s
+[54/60] multi-full heapify t1 -> passed=True err=none wc=39.0s
+[55/60] multi-full avl t0 -> passed=False err=runtime wc=46.7s
+[56/60] multi-full avl t1 -> passed=False err=runtime wc=46.9s
+[57/60] multi-full adj_list_construct t0 -> passed=True err=none wc=37.6s
+[58/60] multi-full adj_list_construct t1 -> passed=True err=none wc=38.5s
+[59/60] multi-full valid_parentheses t0 -> passed=True err=none wc=39.6s
+[60/60] multi-full valid_parentheses t1 -> passed=True err=none wc=39.6s
+
+=== summary ===
+  pass_rate: 0.733
+  total: 60
+C:\Users\rohit\anaconda3\Lib\site-packages\langgraph\cache\base\__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+loaded 30 problems from internal30
+[1/60] multi-full fib t0 -> passed=True err=none wc=32.8s
+[2/60] multi-full fib t1 -> passed=True err=none wc=33.7s
+[3/60] multi-full climb_stairs t0 -> passed=True err=none wc=39.3s
+[4/60] multi-full climb_stairs t1 -> passed=True err=none wc=45.7s
+[5/60] multi-full coin_change t0 -> passed=True err=none wc=43.3s
+[6/60] multi-full coin_change t1 -> passed=True err=none wc=41.7s
+[7/60] multi-full lcs t0 -> passed=True err=none wc=48.3s
+[8/60] multi-full lcs t1 -> passed=True err=none wc=42.8s
+[9/60] multi-full house_robber t0 -> passed=True err=none wc=43.4s
+[10/60] multi-full house_robber t1 -> passed=True err=none wc=39.6s
+[11/60] multi-full min_cost_path t0 -> passed=True err=none wc=44.1s
+[12/60] multi-full min_cost_path t1 -> passed=True err=none wc=46.8s
+[13/60] multi-full lis t0 -> passed=False err=sandbox_violation wc=40.3s
+[14/60] multi-full lis t1 -> passed=False err=sandbox_violation wc=44.0s
+[15/60] multi-full rod_cutting t0 -> passed=True err=none wc=41.4s
+[16/60] multi-full rod_cutting t1 -> passed=True err=none wc=39.8s
+[17/60] multi-full matrix_chain t0 -> passed=False err=wrong_answer wc=44.6s
+[18/60] multi-full matrix_chain t1 -> passed=False err=wrong_answer wc=48.4s
+[19/60] multi-full subset_sum t0 -> passed=True err=none wc=39.3s
+[20/60] multi-full subset_sum t1 -> passed=True err=none wc=40.5s
+[21/60] multi-full topo_sort t0 -> passed=True err=none wc=46.0s
+[22/60] multi-full topo_sort t1 -> passed=True err=none wc=46.5s
+[23/60] multi-full cycle_detect t0 -> passed=True err=none wc=40.7s
+[24/60] multi-full cycle_detect t1 -> passed=False err=wrong_answer wc=45.2s
+[25/60] multi-full bfs t0 -> passed=True err=none wc=42.0s
+[26/60] multi-full bfs t1 -> passed=True err=none wc=52.2s
+[27/60] multi-full dfs t0 -> passed=True err=none wc=37.5s
+[28/60] multi-full dfs t1 -> passed=True err=none wc=37.8s
+[29/60] multi-full dijkstra t0 -> passed=False err=sandbox_violation wc=48.7s
+[30/60] multi-full dijkstra t1 -> passed=False err=sandbox_violation wc=47.5s
+[31/60] multi-full bellman_ford t0 -> passed=True err=none wc=42.6s
+[32/60] multi-full bellman_ford t1 -> passed=True err=none wc=40.9s
+[33/60] multi-full connected_components t0 -> passed=True err=none wc=41.2s
+[34/60] multi-full connected_components t1 -> passed=True err=none wc=37.7s
+[35/60] multi-full scc t0 -> passed=True err=none wc=59.7s
+[36/60] multi-full scc t1 -> passed=True err=none wc=47.7s
+[37/60] multi-full unweighted_shortest t0 -> passed=True err=none wc=43.1s
+[38/60] multi-full unweighted_shortest t1 -> passed=False err=wrong_answer wc=49.5s
+[39/60] multi-full grid_shortest_path t0 -> passed=False err=wrong_answer wc=53.1s
+[40/60] multi-full grid_shortest_path t1 -> passed=False err=wrong_answer wc=51.1s
+[41/60] multi-full lru_cache t0 -> passed=True err=none wc=59.1s
+[42/60] multi-full lru_cache t1 -> passed=True err=none wc=59.4s
+[43/60] multi-full min_stack t0 -> passed=False err=wrong_answer wc=48.4s
+[44/60] multi-full min_stack t1 -> passed=False err=wrong_answer wc=48.4s
+[45/60] multi-full stack_using_queue t0 -> passed=True err=none wc=48.3s
+[46/60] multi-full stack_using_queue t1 -> passed=True err=none wc=49.2s
+[47/60] multi-full reverse_linked_list t0 -> passed=True err=none wc=39.0s
+[48/60] multi-full reverse_linked_list t1 -> passed=True err=none wc=37.5s
+[49/60] multi-full binary_tree_traversal t0 -> passed=True err=none wc=33.6s
+[50/60] multi-full binary_tree_traversal t1 -> passed=True err=none wc=35.6s
+[51/60] multi-full priority_queue t0 -> passed=True err=none wc=54.1s
+[52/60] multi-full priority_queue t1 -> passed=True err=none wc=55.0s
+[53/60] multi-full heapify t0 -> passed=True err=none wc=40.6s
+[54/60] multi-full heapify t1 -> passed=True err=none wc=39.0s
+[55/60] multi-full avl t0 -> passed=False err=runtime wc=66.0s
+[56/60] multi-full avl t1 -> passed=False err=runtime wc=68.7s
+[57/60] multi-full adj_list_construct t0 -> passed=True err=none wc=37.8s
+[58/60] multi-full adj_list_construct t1 -> passed=True err=none wc=38.6s
+[59/60] multi-full valid_parentheses t0 -> passed=True err=none wc=39.1s
+[60/60] multi-full valid_parentheses t1 -> passed=True err=none wc=39.0s
+
+=== summary ===
+  pass_rate: 0.767
+  total: 60
+C:\Users\rohit\anaconda3\Lib\site-packages\langgraph\cache\base\__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+Downloading readme:   0%|          | 0.00/6.52k [00:00<?, ?B/s]Downloading readme: 100%|##########| 6.52k/6.52k [00:00<00:00, 48.2kB/s]Downloading readme: 100%|##########| 6.52k/6.52k [00:00<00:00, 45.2kB/s]
+Downloading data:   0%|          | 0.00/83.9k [00:00<?, ?B/s]Downloading data: 100%|##########| 83.9k/83.9k [00:00<00:00, 176kB/s]Downloading data: 100%|##########| 83.9k/83.9k [00:00<00:00, 176kB/s]
+Generating test split:   0%|          | 0/164 [00:00<?, ? examples/s]Generating test split: 100%|##########| 164/164 [00:00<00:00, 10266.96 examples/s]
+loaded 64 problems from humaneval
+[1/64] single-oneshot humaneval_0 t0 -> passed=False err=runtime wc=4.6s
+[2/64] single-oneshot humaneval_1 t0 -> passed=False err=runtime wc=7.6s
+[3/64] single-oneshot humaneval_2 t0 -> passed=True err=none wc=3.7s
+[4/64] single-oneshot humaneval_3 t0 -> passed=False err=runtime wc=4.3s
+[5/64] single-oneshot humaneval_4 t0 -> passed=False err=runtime wc=4.2s
+[6/64] single-oneshot humaneval_5 t0 -> passed=False err=runtime wc=4.3s
+[7/64] single-oneshot humaneval_6 t0 -> passed=False err=runtime wc=7.4s
+[8/64] single-oneshot humaneval_7 t0 -> passed=False err=runtime wc=4.0s
+[9/64] single-oneshot humaneval_8 t0 -> passed=False err=runtime wc=3.9s
+[10/64] single-oneshot humaneval_9 t0 -> passed=False err=runtime wc=4.9s
+[11/64] single-oneshot humaneval_10 t0 -> passed=False err=runtime wc=5.0s
+[12/64] single-oneshot humaneval_11 t0 -> passed=True err=none wc=4.0s
+[13/64] single-oneshot humaneval_12 t0 -> passed=False err=runtime wc=3.7s
+[14/64] single-oneshot humaneval_13 t0 -> passed=True err=none wc=4.0s
+[15/64] single-oneshot humaneval_14 t0 -> passed=False err=runtime wc=3.9s
+[16/64] single-oneshot humaneval_15 t0 -> passed=True err=none wc=4.0s
+[17/64] single-oneshot humaneval_16 t0 -> passed=True err=none wc=3.7s
+[18/64] single-oneshot humaneval_17 t0 -> passed=False err=runtime wc=4.4s
+[19/64] single-oneshot humaneval_18 t0 -> passed=True err=none wc=6.1s
+[20/64] single-oneshot humaneval_19 t0 -> passed=True err=none wc=5.9s
+[21/64] single-oneshot humaneval_20 t0 -> passed=False err=runtime wc=5.9s
+[22/64] single-oneshot humaneval_21 t0 -> passed=False err=runtime wc=4.4s
+[23/64] single-oneshot humaneval_22 t0 -> passed=False err=runtime wc=3.9s
+[24/64] single-oneshot humaneval_23 t0 -> passed=True err=none wc=3.5s
+[25/64] single-oneshot humaneval_24 t0 -> passed=True err=none wc=4.1s
+[26/64] single-oneshot humaneval_25 t0 -> passed=False err=runtime wc=6.2s
+[27/64] single-oneshot humaneval_26 t0 -> passed=False err=runtime wc=4.2s
+[28/64] single-oneshot humaneval_27 t0 -> passed=True err=none wc=3.8s
+[29/64] single-oneshot humaneval_28 t0 -> passed=False err=runtime wc=3.5s
+[30/64] single-oneshot humaneval_29 t0 -> passed=False err=runtime wc=4.0s
+[31/64] single-oneshot humaneval_30 t0 -> passed=True err=none wc=3.6s
+[32/64] single-oneshot humaneval_31 t0 -> passed=False err=runtime wc=4.4s
+[33/64] single-oneshot humaneval_32 t0 -> passed=False err=sandbox_violation wc=4.1s
+[34/64] single-oneshot humaneval_33 t0 -> passed=True err=none wc=7.5s
+[35/64] single-oneshot humaneval_34 t0 -> passed=True err=none wc=3.3s
+[36/64] single-oneshot humaneval_35 t0 -> passed=True err=none wc=3.6s
+[37/64] single-oneshot humaneval_36 t0 -> passed=False err=runtime wc=5.0s
+[38/64] single-oneshot humaneval_37 t0 -> passed=True err=none wc=6.5s
+[39/64] single-oneshot humaneval_38 t0 -> passed=False err=sandbox_violation wc=5.3s
+[40/64] single-oneshot humaneval_39 t0 -> passed=False err=runtime wc=6.7s
+[41/64] single-oneshot humaneval_40 t0 -> passed=True err=none wc=7.7s
+[42/64] single-oneshot humaneval_41 t0 -> passed=True err=none wc=3.7s
+[43/64] single-oneshot humaneval_42 t0 -> passed=True err=none wc=3.5s
+[44/64] single-oneshot humaneval_43 t0 -> passed=True err=none wc=4.3s
+[45/64] single-oneshot humaneval_44 t0 -> passed=True err=none wc=4.7s
+[46/64] single-oneshot humaneval_45 t0 -> passed=True err=none wc=3.7s
+[47/64] single-oneshot humaneval_46 t0 -> passed=True err=none wc=7.0s
+[48/64] single-oneshot humaneval_47 t0 -> passed=False err=runtime wc=4.7s
+[49/64] single-oneshot humaneval_48 t0 -> passed=True err=none wc=3.6s
+[50/64] single-oneshot humaneval_49 t0 -> passed=True err=none wc=3.6s
+[51/64] single-oneshot humaneval_50 t0 -> passed=False err=sandbox_violation wc=4.2s
+[52/64] single-oneshot humaneval_51 t0 -> passed=True err=none wc=4.0s
+[53/64] single-oneshot humaneval_52 t0 -> passed=True err=none wc=3.8s
+[54/64] single-oneshot humaneval_53 t0 -> passed=False err=sandbox_violation wc=3.6s
+[55/64] single-oneshot humaneval_54 t0 -> passed=True err=none wc=3.9s
+[56/64] single-oneshot humaneval_55 t0 -> passed=True err=none wc=6.2s
+[57/64] single-oneshot humaneval_56 t0 -> passed=True err=none wc=6.0s
+[58/64] single-oneshot humaneval_57 t0 -> passed=True err=none wc=3.7s
+[59/64] single-oneshot humaneval_58 t0 -> passed=True err=none wc=3.7s
+[60/64] single-oneshot humaneval_59 t0 -> passed=True err=none wc=7.5s
+[61/64] single-oneshot humaneval_60 t0 -> passed=True err=none wc=3.7s
+[62/64] single-oneshot humaneval_61 t0 -> passed=False err=runtime wc=4.9s
+[63/64] single-oneshot humaneval_62 t0 -> passed=True err=none wc=3.6s
+[64/64] single-oneshot humaneval_63 t0 -> passed=True err=none wc=6.6s
+
+=== summary ===
+  pass_rate: 0.547
+  total: 64
+C:\Users\rohit\anaconda3\Lib\site-packages\langgraph\cache\base\__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+loaded 64 problems from humaneval
+[1/64] multi-full humaneval_0 t0 -> passed=False err=sandbox_violation wc=41.5s
+[2/64] multi-full humaneval_1 t0 -> passed=False err=sandbox_violation wc=45.9s
+[3/64] multi-full humaneval_2 t0 -> passed=True err=none wc=27.7s
+[4/64] multi-full humaneval_3 t0 -> passed=False err=sandbox_violation wc=36.6s
+[5/64] multi-full humaneval_4 t0 -> passed=False err=sandbox_violation wc=37.7s
+[6/64] multi-full humaneval_5 t0 -> passed=False err=sandbox_violation wc=36.9s
+[7/64] multi-full humaneval_6 t0 -> passed=False err=sandbox_violation wc=46.7s
+[8/64] multi-full humaneval_7 t0 -> passed=False err=sandbox_violation wc=37.0s
+[9/64] multi-full humaneval_8 t0 -> passed=False err=sandbox_violation wc=39.8s
+[10/64] multi-full humaneval_9 t0 -> passed=False err=sandbox_violation wc=40.6s
+[11/64] multi-full humaneval_10 t0 -> passed=True err=none wc=49.1s
+[12/64] multi-full humaneval_11 t0 -> passed=True err=none wc=38.2s
+[13/64] multi-full humaneval_12 t0 -> passed=False err=sandbox_violation wc=36.8s
+[14/64] multi-full humaneval_13 t0 -> passed=True err=none wc=32.0s
+[15/64] multi-full humaneval_14 t0 -> passed=False err=sandbox_violation wc=39.0s
+[16/64] multi-full humaneval_15 t0 -> passed=True err=none wc=33.3s
+[17/64] multi-full humaneval_16 t0 -> passed=True err=none wc=30.8s
+[18/64] multi-full humaneval_17 t0 -> passed=False err=sandbox_violation wc=44.9s
+[19/64] multi-full humaneval_18 t0 -> passed=False err=runtime wc=40.3s
+[20/64] multi-full humaneval_19 t0 -> passed=True err=none wc=50.4s
+[21/64] multi-full humaneval_20 t0 -> passed=False err=sandbox_violation wc=45.7s
+[22/64] multi-full humaneval_21 t0 -> passed=False err=sandbox_violation wc=37.5s
+[23/64] multi-full humaneval_22 t0 -> passed=False err=sandbox_violation wc=35.3s
+[24/64] multi-full humaneval_23 t0 -> passed=True err=none wc=28.9s
+[25/64] multi-full humaneval_24 t0 -> passed=True err=none wc=32.3s
+[26/64] multi-full humaneval_25 t0 -> passed=False err=sandbox_violation wc=40.4s
+[27/64] multi-full humaneval_26 t0 -> passed=False err=sandbox_violation wc=39.5s
+[28/64] multi-full humaneval_27 t0 -> passed=True err=none wc=31.3s
+[29/64] multi-full humaneval_28 t0 -> passed=False err=sandbox_violation wc=32.0s
+[30/64] multi-full humaneval_29 t0 -> passed=False err=sandbox_violation wc=39.5s
+[31/64] multi-full humaneval_30 t0 -> passed=True err=none wc=31.4s
+[32/64] multi-full humaneval_31 t0 -> passed=True err=none wc=40.7s
+[33/64] multi-full humaneval_32 t0 -> passed=False err=sandbox_violation wc=54.2s
+[34/64] multi-full humaneval_33 t0 -> passed=True err=none wc=34.8s
+[35/64] multi-full humaneval_34 t0 -> passed=True err=none wc=29.5s
+[36/64] multi-full humaneval_35 t0 -> passed=True err=none wc=31.9s
+[37/64] multi-full humaneval_36 t0 -> passed=True err=none wc=52.9s
+[38/64] multi-full humaneval_37 t0 -> passed=True err=none wc=34.1s
+[39/64] multi-full humaneval_38 t0 -> passed=False err=sandbox_violation wc=37.4s
+[40/64] multi-full humaneval_39 t0 -> passed=True err=none wc=40.6s
+[41/64] multi-full humaneval_40 t0 -> passed=True err=none wc=38.3s
+[42/64] multi-full humaneval_41 t0 -> passed=False err=runtime wc=34.9s
+[43/64] multi-full humaneval_42 t0 -> passed=True err=none wc=31.2s
+[44/64] multi-full humaneval_43 t0 -> passed=True err=none wc=36.5s
+[45/64] multi-full humaneval_44 t0 -> passed=True err=none wc=35.8s
+[46/64] multi-full humaneval_45 t0 -> passed=True err=none wc=29.1s
+[47/64] multi-full humaneval_46 t0 -> passed=True err=none wc=40.6s
+[48/64] multi-full humaneval_47 t0 -> passed=True err=none wc=34.0s
+[49/64] multi-full humaneval_48 t0 -> passed=True err=none wc=34.4s
+[50/64] multi-full humaneval_49 t0 -> passed=True err=none wc=38.2s
+[51/64] multi-full humaneval_50 t0 -> passed=False err=sandbox_violation wc=40.4s
+[52/64] multi-full humaneval_51 t0 -> passed=True err=none wc=32.8s
+[53/64] multi-full humaneval_52 t0 -> passed=True err=none wc=32.2s
+[54/64] multi-full humaneval_53 t0 -> passed=False err=sandbox_violation wc=34.1s
+[55/64] multi-full humaneval_54 t0 -> passed=False err=runtime wc=34.9s
+[56/64] multi-full humaneval_55 t0 -> passed=True err=none wc=34.6s
+[57/64] multi-full humaneval_56 t0 -> passed=True err=none wc=37.6s
+[58/64] multi-full humaneval_57 t0 -> passed=True err=none wc=42.4s
+[59/64] multi-full humaneval_58 t0 -> passed=True err=none wc=38.2s
+[60/64] multi-full humaneval_59 t0 -> passed=True err=none wc=41.2s
+[61/64] multi-full humaneval_60 t0 -> passed=True err=none wc=28.7s
+[62/64] multi-full humaneval_61 t0 -> passed=True err=none wc=38.3s
+[63/64] multi-full humaneval_62 t0 -> passed=True err=none wc=33.8s
+[64/64] multi-full humaneval_63 t0 -> passed=False err=runtime wc=46.5s
+
+=== summary ===
+  pass_rate: 0.578
+  total: 64
+C:\Users\rohit\anaconda3\Lib\site-packages\langgraph\cache\base\__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+Downloading builder script:   0%|          | 0.00/4.95k [00:00<?, ?B/s]Downloading builder script: 100%|##########| 4.95k/4.95k [00:00<00:00, 23.5kB/s]Downloading builder script: 100%|##########| 4.95k/4.95k [00:00<00:00, 22.8kB/s]
+Downloading readme:   0%|          | 0.00/5.63k [00:00<?, ?B/s]Downloading readme: 100%|##########| 5.63k/5.63k [00:00<00:00, 32.0kB/s]Downloading readme: 100%|##########| 5.63k/5.63k [00:00<00:00, 32.0kB/s]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\rohit\Documents\Research Papers\Researchpaper_4\_repo_clone\execugraph\runner\cli.py", line 122, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "C:\Users\rohit\Documents\Research Papers\Researchpaper_4\_repo_clone\execugraph\runner\cli.py", line 94, in main
+    problems = _load_problems(args.benchmark, limit=args.limit)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\Documents\Research Papers\Researchpaper_4\_repo_clone\execugraph\runner\cli.py", line 27, in _load_problems
+    ps = load_apps_intro()
+         ^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\Documents\Research Papers\Researchpaper_4\_repo_clone\execugraph\benchmarks\apps_intro.py", line 123, in load_apps_intro
+    ds = load_dataset(_DATASET_NAME, split="test")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\Lib\site-packages\datasets\load.py", line 2606, in load_dataset
+    builder_instance = load_dataset_builder(
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\Lib\site-packages\datasets\load.py", line 2277, in load_dataset_builder
+    dataset_module = dataset_module_factory(
+                     ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\Lib\site-packages\datasets\load.py", line 1923, in dataset_module_factory
+    raise e1 from None
+  File "C:\Users\rohit\anaconda3\Lib\site-packages\datasets\load.py", line 1896, in dataset_module_factory
+    ).get_module()
+      ^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\Lib\site-packages\datasets\load.py", line 1532, in get_module
+    trust_remote_code = resolve_trust_remote_code(self.trust_remote_code, self.name)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rohit\anaconda3\Lib\site-packages\datasets\load.py", line 134, in resolve_trust_remote_code
+    raise ValueError(
+ValueError: The repository for codeparrot/apps contains custom code which must be executed to correctly load the dataset. You can inspect the repository content at https://hf.co/datasets/codeparrot/apps.
+Please pass the argument `trust_remote_code=True` to allow custom code to be run.
+=== run id: submission-20260509-223437 ===
+    config: /c/Users/rohit/Documents/Research Papers/Researchpaper_4/_repo_clone/configs/default.yaml
+    keep-alive: 30m
+
+C:\Users\rohit\anaconda3\Lib\site-packages\langgraph\cache\base\__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+[skip] e1_so already complete (pass_rate=0.733). Remove run_summary.json to re-run.
+C:\Users\rohit\anaconda3\Lib\site-packages\langgraph\cache\base\__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+[skip] e1_sr already complete (pass_rate=0.833). Remove run_summary.json to re-run.
+C:\Users\rohit\anaconda3\Lib\site-packages\langgraph\cache\base\__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+[skip] e1_mf already complete (pass_rate=0.767). Remove run_summary.json to re-run.
+C:\Users\rohit\anaconda3\Lib\site-packages\langgraph\cache\base\__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+[skip] e4_no_planner already complete (pass_rate=0.800). Remove run_summary.json to re-run.
+C:\Users\rohit\anaconda3\Lib\site-packages\langgraph\cache\base\__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+[skip] e4_no_reviewer already complete (pass_rate=0.767). Remove run_summary.json to re-run.
+C:\Users\rohit\anaconda3\Lib\site-packages\langgraph\cache\base\__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+[skip] e4_no_optimizer already complete (pass_rate=0.767). Remove run_summary.json to re-run.
+C:\Users\rohit\anaconda3\Lib\site-packages\langgraph\cache\base\__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+[skip] e4_rag_on already complete (pass_rate=0.767). Remove run_summary.json to re-run.
+C:\Users\rohit\anaconda3\Lib\site-packages\langgraph\cache\base\__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+[skip] e5_rb0 already complete (pass_rate=0.733). Remove run_summary.json to re-run.
+C:\Users\rohit\anaconda3\Lib\site-packages\langgraph\cache\base\__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+[skip] e5_rb2 already complete (pass_rate=0.767). Remove run_summary.json to re-run.
+C:\Users\rohit\anaconda3\Lib\site-packages\langgraph\cache\base\__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+[skip] e2_he_so already complete (pass_rate=0.547). Remove run_summary.json to re-run.
+C:\Users\rohit\anaconda3\Lib\site-packages\langgraph\cache\base\__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+[skip] e2_he_mf already complete (pass_rate=0.578). Remove run_summary.json to re-run.
+C:\Users\rohit\anaconda3\Lib\site-packages\langgraph\cache\base\__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+Downloading data:   0%|          | 0.00/107M [00:00<?, ?B/s]Downloading data:  10%|9         | 10.5M/107M [00:00<00:06, 16.0MB/s]Downloading data:  20%|#9        | 21.0M/107M [00:00<00:03, 26.7MB/s]Downloading data:  29%|##9       | 31.5M/107M [00:01<00:02, 36.3MB/s]Downloading data:  39%|###9      | 41.9M/107M [00:01<00:01, 42.2MB/s]Downloading data:  49%|####8     | 52.4M/107M [00:01<00:01, 46.5MB/s]Downloading data:  59%|#####8    | 62.9M/107M [00:01<00:00, 49.7MB/s]Downloading data:  69%|######8   | 73.4M/107M [00:01<00:00, 51.8MB/s]Downloading data:  78%|#######8  | 83.9M/107M [00:01<00:00, 55.5MB/s]Downloading data:  88%|########8 | 94.4M/107M [00:02<00:00, 58.5MB/s]Downloading data:  98%|#########7| 105M/107M [00:02<00:00, 60.8MB/s] Downloading data: 100%|##########| 107M/107M [00:02<00:00, 47.3MB/s]
+Downloading data:   0%|          | 0.00/1.29G [00:00<?, ?B/s]Downloading data:   1%|          | 10.5M/1.29G [00:00<00:42, 30.3MB/s]Downloading data:   2%|1         | 21.0M/1.29G [00:00<00:31, 40.7MB/s]Downloading data:   2%|2         | 31.5M/1.29G [00:00<00:27, 46.5MB/s]Downloading data:   3%|3         | 41.9M/1.29G [00:00<00:23, 52.5MB/s]Downloading data:   4%|4         | 52.4M/1.29G [00:01<00:22, 55.7MB/s]Downloading data:   5%|4         | 62.9M/1.29G [00:01<00:22, 54.8MB/s]Downloading data:   6%|5         | 73.4M/1.29G [00:01<00:21, 56.5MB/s]Downloading data:   6%|6         | 83.9M/1.29G [00:01<00:20, 57.6MB/s]Downloading data:   7%|7         | 94.4M/1.29G [00:01<00:21, 56.8MB/s]Downloading data:   8%|8         | 105M/1.29G [00:01<00:19, 60.7MB/s] Downloading data:   9%|8         | 115M/1.29G [00:02<00:19, 60.5MB/s]Downloading data:  10%|9         | 126M/1.29G [00:02<00:20, 56.2MB/s]Downloading data:  11%|#         | 136M/1.29G [00:02<00:22, 50.6MB/s]Downloading data:  11%|#1        | 147M/1.29G [00:02<00:28, 40.5MB/s]Downloading data:  12%|#2        | 157M/1.29G [00:03<00:29, 38.6MB/s]Downloading data:  13%|#2        | 168M/1.29G [00:03<00:32, 34.4MB/s]Downloading data:  14%|#3        | 178M/1.29G [00:03<00:30, 36.9MB/s]Downloading data:  15%|#4        | 189M/1.29G [00:04<00:28, 38.6MB/s]Downloading data:  15%|#5        | 199M/1.29G [00:04<00:27, 39.2MB/s]Downloading data:  16%|#6        | 210M/1.29G [00:04<00:25, 42.6MB/s]Downloading data:  17%|#7        | 220M/1.29G [00:04<00:23, 45.7MB/s]Downloading data:  18%|#7        | 231M/1.29G [00:04<00:22, 48.1MB/s]Downloading data:  19%|#8        | 241M/1.29G [00:05<00:23, 44.6MB/s]Downloading data:  19%|#9        | 252M/1.29G [00:05<00:21, 47.8MB/s]Downloading data:  20%|##        | 262M/1.29G [00:05<00:20, 50.9MB/s]Downloading data:  21%|##1       | 273M/1.29G [00:05<00:20, 50.8MB/s]Downloading data:  22%|##1       | 283M/1.29G [00:06<00:19, 51.0MB/s]Downloading data:  23%|##2       | 294M/1.29G [00:06<00:21, 46.6MB/s]Downloading data:  24%|##3       | 304M/1.29G [00:06<00:23, 42.8MB/s]Downloading data:  24%|##4       | 315M/1.29G [00:06<00:22, 44.4MB/s]Downloading data:  25%|##5       | 325M/1.29G [00:07<00:24, 40.3MB/s]Downloading data:  26%|##5       | 336M/1.29G [00:07<00:21, 43.8MB/s]Downloading data:  27%|##6       | 346M/1.29G [00:07<00:21, 44.7MB/s]Downloading data:  28%|##7       | 357M/1.29G [00:07<00:19, 47.9MB/s]Downloading data:  28%|##8       | 367M/1.29G [00:07<00:17, 51.6MB/s]Downloading data:  29%|##9       | 377M/1.29G [00:08<00:17, 53.6MB/s]Downloading data:  30%|###       | 388M/1.29G [00:08<00:16, 56.3MB/s]Downloading data:  31%|###       | 398M/1.29G [00:08<00:22, 40.1MB/s]Downloading data:  32%|###1      | 409M/1.29G [00:08<00:24, 36.2MB/s]Downloading data:  32%|###2      | 419M/1.29G [00:09<00:23, 38.0MB/s]Downloading data:  33%|###3      | 430M/1.29G [00:09<00:22, 39.1MB/s]Downloading data:  34%|###4      | 440M/1.29G [00:09<00:22, 38.4MB/s]Downloading data:  35%|###4      | 451M/1.29G [00:10<00:21, 39.8MB/s]Downloading data:  36%|###5      | 461M/1.29G [00:10<00:20, 40.5MB/s]Downloading data:  37%|###6      | 472M/1.29G [00:10<00:18, 43.7MB/s]Downloading data:  37%|###7      | 482M/1.29G [00:10<00:18, 44.7MB/s]Downloading data:  38%|###8      | 493M/1.29G [00:10<00:16, 48.0MB/s]Downloading data:  39%|###8      | 503M/1.29G [00:11<00:14, 52.8MB/s]Downloading data:  40%|###9      | 514M/1.29G [00:11<00:14, 52.5MB/s]Downloading data:  41%|####      | 524M/1.29G [00:11<00:14, 53.0MB/s]Downloading data:  41%|####1     | 535M/1.29G [00:11<00:13, 54.5MB/s]Downloading data:  42%|####2     | 545M/1.29G [00:11<00:12, 58.1MB/s]Downloading data:  43%|####2     | 556M/1.29G [00:11<00:12, 60.3MB/s]Downloading data:  44%|####3     | 566M/1.29G [00:12<00:11, 61.1MB/s]Downloading data:  45%|####4     | 577M/1.29G [00:12<00:12, 59.3MB/s]Downloading data:  45%|####5     | 587M/1.29G [00:12<00:12, 56.7MB/s]Downloading data:  46%|####6     | 598M/1.29G [00:12<00:11, 59.7MB/s]Downloading data:  47%|####7     | 608M/1.29G [00:12<00:11, 61.5MB/s]Downloading data:  48%|####7     | 619M/1.29G [00:12<00:11, 60.2MB/s]Downloading data:  49%|####8     | 629M/1.29G [00:13<00:10, 61.2MB/s]Downloading data:  49%|####9     | 640M/1.29G [00:13<00:10, 62.7MB/s]Downloading data:  50%|#####     | 650M/1.29G [00:13<00:09, 65.4MB/s]Downloading data:  51%|#####1    | 661M/1.29G [00:13<00:10, 60.1MB/s]Downloading data:  52%|#####1    | 671M/1.29G [00:13<00:10, 60.2MB/s]Downloading data:  53%|#####2    | 682M/1.29G [00:14<00:14, 42.1MB/s]Downloading data:  54%|#####3    | 692M/1.29G [00:14<00:13, 45.5MB/s]Downloading data:  54%|#####4    | 703M/1.29G [00:14<00:13, 44.2MB/s]Downloading data:  55%|#####5    | 713M/1.29G [00:14<00:13, 43.7MB/s]Downloading data:  56%|#####5    | 724M/1.29G [00:15<00:13, 42.6MB/s]Downloading data:  57%|#####6    | 734M/1.29G [00:15<00:13, 42.5MB/s]Downloading data:  58%|#####7    | 744M/1.29G [00:15<00:11, 45.8MB/s]Downloading data:  58%|#####8    | 755M/1.29G [00:15<00:10, 49.3MB/s]Downloading data:  59%|#####9    | 765M/1.29G [00:15<00:10, 51.2MB/s]Downloading data:  60%|######    | 776M/1.29G [00:16<00:09, 53.2MB/s]Downloading data:  61%|######    | 786M/1.29G [00:16<00:09, 52.8MB/s]Downloading data:  62%|######1   | 797M/1.29G [00:16<00:09, 54.6MB/s]Downloading data:  62%|######2   | 807M/1.29G [00:16<00:08, 57.6MB/s]Downloading data:  63%|######3   | 818M/1.29G [00:16<00:07, 59.9MB/s]Downloading data:  64%|######4   | 828M/1.29G [00:17<00:09, 47.1MB/s]Downloading data:  65%|######4   | 839M/1.29G [00:17<00:09, 46.0MB/s]Downloading data:  66%|######5   | 849M/1.29G [00:17<00:13, 33.8MB/s]Downloading data:  67%|######7   | 870M/1.29G [00:18<00:08, 47.8MB/s]Downloading data:  68%|######8   | 881M/1.29G [00:18<00:08, 46.2MB/s]Downloading data:  69%|######8   | 891M/1.29G [00:18<00:08, 48.0MB/s]Downloading data:  70%|######9   | 902M/1.29G [00:18<00:07, 52.1MB/s]Downloading data:  71%|#######   | 912M/1.29G [00:18<00:07, 52.4MB/s]Downloading data:  71%|#######1  | 923M/1.29G [00:19<00:06, 52.9MB/s]Downloading data:  72%|#######2  | 933M/1.29G [00:19<00:07, 45.6MB/s]Downloading data:  73%|#######3  | 944M/1.29G [00:19<00:06, 51.6MB/s]Downloading data:  74%|#######3  | 954M/1.29G [00:19<00:06, 53.9MB/s]Downloading data:  75%|#######4  | 965M/1.29G [00:19<00:06, 53.0MB/s]Downloading data:  75%|#######5  | 975M/1.29G [00:20<00:05, 54.9MB/s]Downloading data:  76%|#######6  | 986M/1.29G [00:20<00:05, 56.4MB/s]Downloading data:  77%|#######7  | 996M/1.29G [00:20<00:05, 53.4MB/s]Downloading data:  78%|#######7  | 1.01G/1.29G [00:20<00:06, 46.1MB/s]Downloading data:  79%|#######8  | 1.02G/1.29G [00:21<00:05, 48.4MB/s]Downloading data:  80%|#######9  | 1.03G/1.29G [00:21<00:05, 51.4MB/s]Downloading data:  80%|########  | 1.04G/1.29G [00:21<00:05, 46.9MB/s]Downloading data:  82%|########1 | 1.06G/1.29G [00:21<00:04, 55.3MB/s]Downloading data:  83%|########2 | 1.07G/1.29G [00:22<00:04, 48.2MB/s]Downloading data:  84%|########3 | 1.08G/1.29G [00:22<00:05, 38.5MB/s]Downloading data:  85%|########5 | 1.10G/1.29G [00:22<00:03, 49.1MB/s]Downloading data:  86%|########5 | 1.11G/1.29G [00:23<00:03, 46.2MB/s]Downloading data:  87%|########6 | 1.12G/1.29G [00:23<00:04, 42.0MB/s]Downloading data:  88%|########7 | 1.13G/1.29G [00:23<00:03, 49.2MB/s]Downloading data:  88%|########8 | 1.14G/1.29G [00:23<00:02, 51.2MB/s]Downloading data:  89%|########9 | 1.15G/1.29G [00:23<00:02, 54.2MB/s]Downloading data:  90%|######### | 1.16G/1.29G [00:24<00:02, 54.4MB/s]Downloading data:  91%|######### | 1.17G/1.29G [00:24<00:02, 56.0MB/s]Downloading data:  92%|#########1| 1.18G/1.29G [00:24<00:01, 55.8MB/s]Downloading data:  92%|#########2| 1.20G/1.29G [00:24<00:01, 53.0MB/s]Downloading data:  93%|#########3| 1.21G/1.29G [00:24<00:01, 54.9MB/s]Downloading data:  94%|#########4| 1.22G/1.29G [00:24<00:01, 55.0MB/s]Downloading data:  95%|#########4| 1.23G/1.29G [00:25<00:01, 55.1MB/s]Downloading data:  96%|#########5| 1.24G/1.29G [00:25<00:01, 52.5MB/s]Downloading data:  97%|#########6| 1.25G/1.29G [00:25<00:00, 53.4MB/s]Downloading data:  97%|#########7| 1.26G/1.29G [00:25<00:00, 54.6MB/s]Downloading data:  98%|#########8| 1.27G/1.29G [00:26<00:00, 40.5MB/s]Downloading data:  99%|#########8| 1.28G/1.29G [00:26<00:00, 41.9MB/s]Downloading data: 100%|#########9| 1.29G/1.29G [00:26<00:00, 44.3MB/s]Downloading data: 100%|##########| 1.29G/1.29G [00:26<00:00, 48.5MB/s]
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 1000 examples [00:00, 6279.91 examples/s]Generating train split: 2002 examples [00:00, 7163.16 examples/s]Generating train split: 3000 examples [00:00, 6734.94 examples/s]Generating train split: 5000 examples [00:00, 10429.88 examples/s]Generating train split: 5000 examples [00:00, 9004.55 examples/s] 
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 281 examples [00:00, 1483.28 examples/s]Generating test split: 542 examples [00:00, 1350.38 examples/s]Generating test split: 930 examples [00:00, 1177.09 examples/s]Generating test split: 1088 examples [00:01, 542.48 examples/s]Generating test split: 1174 examples [00:01, 573.53 examples/s]Generating test split: 1273 examples [00:01, 555.38 examples/s]Generating test split: 1427 examples [00:02, 550.35 examples/s]Generating test split: 1580 examples [00:02, 588.04 examples/s]Generating test split: 1716 examples [00:02, 563.74 examples/s]Generating test split: 2000 examples [00:03, 401.60 examples/s]Generating test split: 2660 examples [00:03, 900.60 examples/s]Generating test split: 3725 examples [00:03, 1792.17 examples/s]Generating test split: 4101 examples [00:05, 836.39 examples/s] Generating test split: 4416 examples [00:05, 683.32 examples/s]Generating test split: 5000 examples [00:06, 814.46 examples/s]Generating test split: 5000 examples [00:06, 783.02 examples/s]
+loaded 50 problems from apps_intro
+[1/50] single-oneshot apps_intro_000 t0 -> passed=False err=runtime wc=6.9s
+[2/50] single-oneshot apps_intro_001 t0 -> passed=False err=runtime wc=13.3s
+[3/50] single-oneshot apps_intro_002 t0 -> passed=False err=sandbox_violation wc=6.1s
+[4/50] single-oneshot apps_intro_003 t0 -> passed=False err=sandbox_violation wc=7.1s
+[5/50] single-oneshot apps_intro_004 t0 -> passed=False err=runtime wc=7.4s
+[6/50] single-oneshot apps_intro_005 t0 -> passed=False err=sandbox_violation wc=6.4s
+[7/50] single-oneshot apps_intro_006 t0 -> passed=False err=sandbox_violation wc=5.1s
+[8/50] single-oneshot apps_intro_007 t0 -> passed=False err=runtime wc=5.1s
+[9/50] single-oneshot apps_intro_008 t0 -> passed=False err=runtime wc=5.5s
+[10/50] single-oneshot apps_intro_009 t0 -> passed=False err=runtime wc=5.9s
+[11/50] single-oneshot apps_intro_010 t0 -> passed=False err=runtime wc=5.9s
+[12/50] single-oneshot apps_intro_011 t0 -> passed=False err=runtime wc=9.0s
+[13/50] single-oneshot apps_intro_012 t0 -> passed=False err=runtime wc=5.7s
+[14/50] single-oneshot apps_intro_013 t0 -> passed=False err=runtime wc=5.5s
+[15/50] single-oneshot apps_intro_014 t0 -> passed=False err=sandbox_violation wc=5.2s
+[16/50] single-oneshot apps_intro_015 t0 -> passed=False err=sandbox_violation wc=5.4s
+[17/50] single-oneshot apps_intro_016 t0 -> passed=False err=runtime wc=4.6s
+[18/50] single-oneshot apps_intro_017 t0 -> passed=False err=runtime wc=4.6s
+[19/50] single-oneshot apps_intro_018 t0 -> passed=False err=runtime wc=4.9s
+[20/50] single-oneshot apps_intro_019 t0 -> passed=False err=runtime wc=14.5s
+[21/50] single-oneshot apps_intro_020 t0 -> passed=False err=sandbox_violation wc=6.5s
+[22/50] single-oneshot apps_intro_021 t0 -> passed=False err=sandbox_violation wc=5.6s
+[23/50] single-oneshot apps_intro_022 t0 -> passed=False err=sandbox_violation wc=8.6s
+[24/50] single-oneshot apps_intro_023 t0 -> passed=False err=runtime wc=6.7s
+[25/50] single-oneshot apps_intro_024 t0 -> passed=False err=sandbox_violation wc=5.9s
+[26/50] single-oneshot apps_intro_025 t0 -> passed=False err=runtime wc=5.5s
+[27/50] single-oneshot apps_intro_026 t0 -> passed=False err=runtime wc=8.0s
+[28/50] single-oneshot apps_intro_027 t0 -> passed=False err=runtime wc=8.3s
+[29/50] single-oneshot apps_intro_028 t0 -> passed=False err=runtime wc=6.0s
+[30/50] single-oneshot apps_intro_029 t0 -> passed=False err=runtime wc=6.0s
+[31/50] single-oneshot apps_intro_030 t0 -> passed=False err=sandbox_violation wc=4.8s
+[32/50] single-oneshot apps_intro_031 t0 -> passed=False err=sandbox_violation wc=6.1s
+[33/50] single-oneshot apps_intro_032 t0 -> passed=False err=runtime wc=4.9s
+[34/50] single-oneshot apps_intro_033 t0 -> passed=False err=runtime wc=5.4s
+[35/50] single-oneshot apps_intro_034 t0 -> passed=False err=sandbox_violation wc=7.2s
+[36/50] single-oneshot apps_intro_035 t0 -> passed=False err=runtime wc=4.3s
+[37/50] single-oneshot apps_intro_036 t0 -> passed=False err=runtime wc=5.6s
+[38/50] single-oneshot apps_intro_037 t0 -> passed=False err=sandbox_violation wc=9.1s
+[39/50] single-oneshot apps_intro_038 t0 -> passed=False err=runtime wc=4.5s
+[40/50] single-oneshot apps_intro_039 t0 -> passed=False err=runtime wc=11.0s
+[41/50] single-oneshot apps_intro_040 t0 -> passed=False err=runtime wc=6.5s
+[42/50] single-oneshot apps_intro_041 t0 -> passed=False err=sandbox_violation wc=9.0s
+[43/50] single-oneshot apps_intro_042 t0 -> passed=False err=runtime wc=6.4s
+[44/50] single-oneshot apps_intro_043 t0 -> passed=False err=sandbox_violation wc=9.3s
+[45/50] single-oneshot apps_intro_044 t0 -> passed=False err=runtime wc=7.3s
+[46/50] single-oneshot apps_intro_045 t0 -> passed=False err=runtime wc=7.6s
+[47/50] single-oneshot apps_intro_046 t0 -> passed=False err=runtime wc=4.7s
+[48/50] single-oneshot apps_intro_047 t0 -> passed=False err=sandbox_violation wc=7.5s
+[49/50] single-oneshot apps_intro_048 t0 -> passed=False err=runtime wc=10.7s
+[50/50] single-oneshot apps_intro_049 t0 -> passed=False err=sandbox_violation wc=4.7s
+
+=== summary ===
+  pass_rate: 0.000
+  total: 50
+C:\Users\rohit\anaconda3\Lib\site-packages\langgraph\cache\base\__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+loaded 50 problems from apps_intro
+[1/50] multi-full apps_intro_000 t0 -> passed=False err=sandbox_violation wc=55.2s
+[2/50] multi-full apps_intro_001 t0 -> passed=False err=sandbox_violation wc=74.0s
+[3/50] multi-full apps_intro_002 t0 -> passed=False err=sandbox_violation wc=56.2s
+[4/50] multi-full apps_intro_003 t0 -> passed=False err=sandbox_violation wc=68.6s
+[5/50] multi-full apps_intro_004 t0 -> passed=False err=runtime wc=59.8s
+[6/50] multi-full apps_intro_005 t0 -> passed=False err=sandbox_violation wc=55.5s
+[7/50] multi-full apps_intro_006 t0 -> passed=False err=sandbox_violation wc=58.3s
+[8/50] multi-full apps_intro_007 t0 -> passed=False err=sandbox_violation wc=51.8s
+[9/50] multi-full apps_intro_008 t0 -> passed=False err=runtime wc=46.2s
+[10/50] multi-full apps_intro_009 t0 -> passed=False err=sandbox_violation wc=62.3s
+[11/50] multi-full apps_intro_010 t0 -> passed=False err=sandbox_violation wc=68.8s
+[12/50] multi-full apps_intro_011 t0 -> passed=False err=sandbox_violation wc=82.2s
+[13/50] multi-full apps_intro_012 t0 -> passed=False err=sandbox_violation wc=83.6s
+[14/50] multi-full apps_intro_013 t0 -> passed=False err=runtime wc=68.0s
+[15/50] multi-full apps_intro_014 t0 -> passed=False err=sandbox_violation wc=64.2s
+[16/50] multi-full apps_intro_015 t0 -> passed=False err=sandbox_violation wc=63.8s
+[17/50] multi-full apps_intro_016 t0 -> passed=False err=sandbox_violation wc=58.5s
+[18/50] multi-full apps_intro_017 t0 -> passed=False err=sandbox_violation wc=50.1s
+[19/50] multi-full apps_intro_018 t0 -> passed=False err=sandbox_violation wc=54.6s
+[20/50] multi-full apps_intro_019 t0 -> passed=False err=runtime wc=70.0s
+[21/50] multi-full apps_intro_020 t0 -> passed=False err=sandbox_violation wc=58.5s
+[22/50] multi-full apps_intro_021 t0 -> passed=False err=sandbox_violation wc=51.0s
+[23/50] multi-full apps_intro_022 t0 -> passed=False err=sandbox_violation wc=74.6s
+[24/50] multi-full apps_intro_023 t0 -> passed=False err=sandbox_violation wc=72.1s
+[25/50] multi-full apps_intro_024 t0 -> passed=False err=sandbox_violation wc=56.4s
+[26/50] multi-full apps_intro_025 t0 -> passed=False err=sandbox_violation wc=80.3s
+[27/50] multi-full apps_intro_026 t0 -> passed=False err=sandbox_violation wc=71.3s
+[28/50] multi-full apps_intro_027 t0 -> passed=False err=sandbox_violation wc=65.0s
+[29/50] multi-full apps_intro_028 t0 -> passed=False err=sandbox_violation wc=70.0s
+[30/50] multi-full apps_intro_029 t0 -> passed=False err=sandbox_violation wc=78.6s
+[31/50] multi-full apps_intro_030 t0 -> passed=False err=sandbox_violation wc=59.8s
+[32/50] multi-full apps_intro_031 t0 -> passed=False err=sandbox_violation wc=67.5s
+[33/50] multi-full apps_intro_032 t0 -> passed=False err=sandbox_violation wc=59.0s
+[34/50] multi-full apps_intro_033 t0 -> passed=False err=sandbox_violation wc=58.9s
+[35/50] multi-full apps_intro_034 t0 -> passed=False err=sandbox_violation wc=68.0s
+[36/50] multi-full apps_intro_035 t0 -> passed=False err=sandbox_violation wc=60.6s
+[37/50] multi-full apps_intro_036 t0 -> passed=False err=sandbox_violation wc=54.0s
+[38/50] multi-full apps_intro_037 t0 -> passed=False err=sandbox_violation wc=74.1s
+[39/50] multi-full apps_intro_038 t0 -> passed=False err=sandbox_violation wc=59.0s
+[40/50] multi-full apps_intro_039 t0 -> passed=False err=sandbox_violation wc=61.5s
+[41/50] multi-full apps_intro_040 t0 -> passed=False err=sandbox_violation wc=67.4s
+[42/50] multi-full apps_intro_041 t0 -> passed=False err=sandbox_violation wc=72.0s
+[43/50] multi-full apps_intro_042 t0 -> passed=False err=sandbox_violation wc=69.9s
+[44/50] multi-full apps_intro_043 t0 -> passed=False err=sandbox_violation wc=70.9s
+[45/50] multi-full apps_intro_044 t0 -> passed=False err=sandbox_violation wc=82.1s
+[46/50] multi-full apps_intro_045 t0 -> passed=False err=sandbox_violation wc=81.3s
+[47/50] multi-full apps_intro_046 t0 -> passed=False err=sandbox_violation wc=65.2s
+[48/50] multi-full apps_intro_047 t0 -> passed=False err=sandbox_violation wc=77.9s
+[49/50] multi-full apps_intro_048 t0 -> passed=False err=sandbox_violation wc=77.6s
+[50/50] multi-full apps_intro_049 t0 -> passed=False err=sandbox_violation wc=61.0s
+
+=== summary ===
+  pass_rate: 0.000
+  total: 50
+'core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+[skip] e5_rb2 already complete (pass_rate=0.767). Remove run_summary.json to re-run.
+C:\Users\rohit\anaconda3\Lib\site-packages\langgraph\cache\base\__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+[skip] e2_he_so already complete (pass_rate=0.547). Remove run_summary.json to re-run.
+C:\Users\rohit\anaconda3\Lib\site-packages\langgraph\cache\base\__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+[skip] e2_he_mf already complete (pass_rate=0.578). Remove run_summary.json to re-run.
+C:\Users\rohit\anaconda3\Lib\site-packages\langgraph\cache\base\__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+loaded 50 problems from apps_intro
+[1/50] single-oneshot apps_intro_000 t0 -> passed=False err=syntax wc=7.3s
+[2/50] single-oneshot apps_intro_001 t0 -> passed=False err=syntax wc=13.2s
+[3/50] single-oneshot apps_intro_002 t0 -> passed=False err=runtime wc=13.0s
+[4/50] single-oneshot apps_intro_003 t0 -> passed=False err=wrong_answer wc=12.8s
+[5/50] single-oneshot apps_intro_004 t0 -> passed=False err=syntax wc=14.4s
+[6/50] single-oneshot apps_intro_005 t0 -> passed=False err=runtime wc=6.8s
+[7/50] single-oneshot apps_intro_006 t0 -> passed=False err=runtime wc=12.0s
+[8/50] single-oneshot apps_intro_007 t0 -> passed=False err=runtime wc=4.9s
+[9/50] single-oneshot apps_intro_008 t0 -> passed=False err=runtime wc=17.0s
+[10/50] single-oneshot apps_intro_009 t0 -> passed=False err=syntax wc=10.2s
+[11/50] single-oneshot apps_intro_010 t0 -> passed=False err=runtime wc=8.6s
+[12/50] single-oneshot apps_intro_011 t0 -> passed=False err=runtime wc=8.8s
+[13/50] single-oneshot apps_intro_012 t0 -> passed=False err=runtime wc=8.6s
+[14/50] single-oneshot apps_intro_013 t0 -> passed=False err=syntax wc=7.0s
+[15/50] single-oneshot apps_intro_014 t0 -> passed=False err=runtime wc=16.5s
+[16/50] single-oneshot apps_intro_015 t0 -> passed=False err=runtime wc=12.3s
+[17/50] single-oneshot apps_intro_016 t0 -> passed=False err=runtime wc=5.9s
+[18/50] single-oneshot apps_intro_017 t0 -> passed=False err=runtime wc=4.4s
+[19/50] single-oneshot apps_intro_018 t0 -> passed=False err=runtime wc=6.5s
+[20/50] single-oneshot apps_intro_019 t0 -> passed=True err=none wc=14.3s
+[21/50] single-oneshot apps_intro_020 t0 -> passed=False err=runtime wc=13.0s
+[22/50] single-oneshot apps_intro_021 t0 -> passed=False err=syntax wc=17.0s
+[23/50] single-oneshot apps_intro_022 t0 -> passed=False err=wrong_answer wc=8.3s
+[24/50] single-oneshot apps_intro_023 t0 -> passed=False err=syntax wc=6.6s
+[25/50] single-oneshot apps_intro_024 t0 -> passed=False err=runtime wc=5.9s
+[26/50] single-oneshot apps_intro_025 t0 -> passed=False err=syntax wc=5.5s
+[27/50] single-oneshot apps_intro_026 t0 -> passed=False err=runtime wc=17.1s
+[28/50] single-oneshot apps_intro_027 t0 -> passed=False err=syntax wc=13.0s
+[29/50] single-oneshot apps_intro_028 t0 -> passed=False err=runtime wc=7.1s
+[30/50] single-oneshot apps_intro_029 t0 -> passed=False err=syntax wc=5.7s
+[31/50] single-oneshot apps_intro_030 t0 -> passed=False err=syntax wc=5.1s
+[32/50] single-oneshot apps_intro_031 t0 -> passed=False err=runtime wc=5.9s
+[33/50] single-oneshot apps_intro_032 t0 -> passed=True err=none wc=11.7s
+[34/50] single-oneshot apps_intro_033 t0 -> passed=True err=none wc=9.6s
+[35/50] single-oneshot apps_intro_034 t0 -> passed=False err=runtime wc=7.1s
+[36/50] single-oneshot apps_intro_035 t0 -> passed=False err=runtime wc=4.0s
+[37/50] single-oneshot apps_intro_036 t0 -> passed=False err=syntax wc=5.3s
+[38/50] single-oneshot apps_intro_037 t0 -> passed=False err=syntax wc=8.6s
+[39/50] single-oneshot apps_intro_038 t0 -> passed=False err=runtime wc=11.3s
+[40/50] single-oneshot apps_intro_039 t0 -> passed=False err=wrong_answer wc=18.3s
+[41/50] single-oneshot apps_intro_040 t0 -> passed=False err=syntax wc=6.7s
+[42/50] single-oneshot apps_intro_041 t0 -> passed=False err=runtime wc=8.9s
+[43/50] single-oneshot apps_intro_042 t0 -> passed=False err=runtime wc=6.4s
+[44/50] single-oneshot apps_intro_043 t0 -> passed=False err=runtime wc=9.0s
+[45/50] single-oneshot apps_intro_044 t0 -> passed=False err=syntax wc=16.4s
+[46/50] single-oneshot apps_intro_045 t0 -> passed=False err=wrong_answer wc=15.2s
+[47/50] single-oneshot apps_intro_046 t0 -> passed=False err=runtime wc=7.5s
+[48/50] single-oneshot apps_intro_047 t0 -> passed=False err=wrong_answer wc=7.8s
+[49/50] single-oneshot apps_intro_048 t0 -> passed=False err=syntax wc=13.7s
+[50/50] single-oneshot apps_intro_049 t0 -> passed=False err=runtime wc=4.5s
+
+=== summary ===
+  pass_rate: 0.060
+  total: 50
+C:\Users\rohit\anaconda3\Lib\site-packages\langgraph\cache\base\__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+loaded 50 problems from apps_intro
+[resume] 7 trial(s) already logged — skipping.
+[8/50] multi-full apps_intro_000 t0 -> passed=True err=none wc=64.5s
+[9/50] multi-full apps_intro_001 t0 -> passed=False err=syntax wc=92.1s
+[10/50] multi-full apps_intro_002 t0 -> passed=False err=syntax wc=64.8s
+[11/50] multi-full apps_intro_010 t0 -> passed=False err=wrong_answer wc=67.4s
+[12/50] multi-full apps_intro_011 t0 -> passed=False err=sandbox_violation wc=62.2s
+[13/50] multi-full apps_intro_012 t0 -> passed=True err=none wc=52.6s
+[14/50] multi-full apps_intro_013 t0 -> passed=False err=runtime wc=57.1s
+[15/50] multi-full apps_intro_014 t0 -> passed=False err=runtime wc=45.5s
+[16/50] multi-full apps_intro_015 t0 -> passed=False err=syntax wc=68.8s
+[17/50] multi-full apps_intro_016 t0 -> passed=False err=runtime wc=61.6s
+[18/50] multi-full apps_intro_017 t0 -> passed=False err=runtime wc=56.3s
+[19/50] multi-full apps_intro_018 t0 -> passed=False err=runtime wc=57.9s
+[20/50] multi-full apps_intro_019 t0 -> passed=False err=runtime wc=84.9s
+[21/50] multi-full apps_intro_020 t0 -> passed=False err=syntax wc=57.5s
+[22/50] multi-full apps_intro_021 t0 -> passed=False err=syntax wc=65.0s
+[23/50] multi-full apps_intro_022 t0 -> passed=False err=runtime wc=83.2s
+[24/50] multi-full apps_intro_023 t0 -> passed=False err=syntax wc=62.9s
+[25/50] multi-full apps_intro_024 t0 -> passed=False err=syntax wc=65.2s
+[26/50] multi-full apps_intro_025 t0 -> passed=False err=syntax wc=78.4s
+[27/50] multi-full apps_intro_026 t0 -> passed=False err=syntax wc=69.1s
+[28/50] multi-full apps_intro_027 t0 -> passed=False err=syntax wc=65.6s
+[29/50] multi-full apps_intro_028 t0 -> passed=False err=wrong_answer wc=62.9s
+[30/50] multi-full apps_intro_029 t0 -> passed=False err=syntax wc=60.8s
+[31/50] multi-full apps_intro_030 t0 -> passed=False err=runtime wc=57.4s
+[32/50] multi-full apps_intro_031 t0 -> passed=False err=syntax wc=68.7s
+[33/50] multi-full apps_intro_032 t0 -> passed=False err=runtime wc=52.7s
+[34/50] multi-full apps_intro_033 t0 -> passed=True err=none wc=58.4s
+[35/50] multi-full apps_intro_034 t0 -> passed=False err=runtime wc=66.2s
+[36/50] multi-full apps_intro_035 t0 -> passed=False err=syntax wc=65.6s
+[37/50] multi-full apps_intro_036 t0 -> passed=False err=syntax wc=58.0s
+[38/50] multi-full apps_intro_037 t0 -> passed=False err=syntax wc=73.6s
+[39/50] multi-full apps_intro_038 t0 -> passed=False err=runtime wc=70.3s
+[40/50] multi-full apps_intro_039 t0 -> passed=False err=wrong_answer wc=69.9s
+[41/50] multi-full apps_intro_040 t0 -> passed=False err=wrong_answer wc=77.3s
+[42/50] multi-full apps_intro_041 t0 -> passed=False err=syntax wc=82.5s
+[43/50] multi-full apps_intro_042 t0 -> passed=False err=syntax wc=70.9s
+[44/50] multi-full apps_intro_043 t0 -> passed=True err=none wc=79.4s
+[45/50] multi-full apps_intro_044 t0 -> passed=False err=syntax wc=79.7s
+[46/50] multi-full apps_intro_045 t0 -> passed=False err=runtime wc=73.4s
+[47/50] multi-full apps_intro_046 t0 -> passed=True err=none wc=75.0s
+[48/50] multi-full apps_intro_047 t0 -> passed=False err=wrong_answer wc=158.8s
+[49/50] multi-full apps_intro_048 t0 -> passed=False err=syntax wc=184.8s
+[50/50] multi-full apps_intro_049 t0 -> passed=False err=runtime wc=151.5s
+
+=== summary ===
+  pass_rate: 0.100
+  total: 50
+sSerializer
+loaded 30 problems from internal30
+[1/60] single-oneshot fib t0 -> passed=True err=none wc=35.4s
+[2/60] single-oneshot fib t1 -> passed=True err=none wc=32.2s
+[3/60] single-oneshot climb_stairs t0 -> passed=True err=none wc=26.3s
+[4/60] single-oneshot climb_stairs t1 -> passed=True err=none wc=25.1s
+[5/60] single-oneshot coin_change t0 -> passed=True err=none wc=22.4s
+[6/60] single-oneshot coin_change t1 -> passed=True err=none wc=25.5s
+[7/60] single-oneshot lcs t0 -> passed=True err=none wc=27.0s
+[8/60] single-oneshot lcs t1 -> passed=True err=none wc=39.6s
+[9/60] single-oneshot house_robber t0 -> passed=True err=none wc=32.6s
+[10/60] single-oneshot house_robber t1 -> passed=True err=none wc=26.8s
+[11/60] single-oneshot min_cost_path t0 -> passed=True err=none wc=32.0s
+[12/60] single-oneshot min_cost_path t1 -> passed=True err=none wc=33.3s
+[13/60] single-oneshot lis t0 -> passed=True err=none wc=22.7s
+[14/60] single-oneshot lis t1 -> passed=True err=none wc=31.3s
+[15/60] single-oneshot rod_cutting t0 -> passed=True err=none wc=26.3s
+[16/60] single-oneshot rod_cutting t1 -> passed=True err=none wc=21.0s
+[17/60] single-oneshot matrix_chain t0 -> passed=False err=wrong_answer wc=29.5s
+[18/60] single-oneshot matrix_chain t1 -> passed=False err=wrong_answer wc=27.9s
+[19/60] single-oneshot subset_sum t0 -> passed=True err=none wc=20.4s
+[20/60] single-oneshot subset_sum t1 -> passed=True err=none wc=26.3s
+[21/60] single-oneshot topo_sort t0 -> passed=True err=none wc=21.1s
+[22/60] single-oneshot topo_sort t1 -> passed=True err=none wc=37.6s
+[23/60] single-oneshot cycle_detect t0 -> passed=True err=none wc=27.4s
+[24/60] single-oneshot cycle_detect t1 -> passed=True err=none wc=19.2s
+[25/60] single-oneshot bfs t0 -> passed=True err=none wc=15.9s
+[26/60] single-oneshot bfs t1 -> passed=True err=none wc=13.6s
+[27/60] single-oneshot dfs t0 -> passed=False err=syntax wc=10.3s
+[28/60] single-oneshot dfs t1 -> passed=True err=none wc=8.9s
+[29/60] single-oneshot dijkstra t0 -> passed=False err=sandbox_violation wc=16.1s
+[30/60] single-oneshot dijkstra t1 -> passed=False err=sandbox_violation wc=26.7s
+[31/60] single-oneshot bellman_ford t0 -> passed=True err=none wc=22.5s
+[32/60] single-oneshot bellman_ford t1 -> passed=True err=none wc=23.0s
+[33/60] single-oneshot connected_components t0 -> passed=False err=runtime wc=18.8s
+[34/60] single-oneshot connected_components t1 -> passed=False err=runtime wc=16.0s
+[35/60] single-oneshot scc t0 -> passed=False err=runtime wc=31.3s
+[36/60] single-oneshot scc t1 -> passed=False err=runtime wc=49.5s
+[37/60] single-oneshot unweighted_shortest t0 -> passed=True err=none wc=31.0s
+[38/60] single-oneshot unweighted_shortest t1 -> passed=True err=none wc=13.9s
+[39/60] single-oneshot grid_shortest_path t0 -> passed=False err=wrong_answer wc=32.2s
+[40/60] single-oneshot grid_shortest_path t1 -> passed=False err=wrong_answer wc=53.3s
+[41/60] single-oneshot lru_cache t0 -> passed=True err=none wc=41.1s
+[42/60] single-oneshot lru_cache t1 -> passed=True err=none wc=32.1s
+[43/60] single-oneshot min_stack t0 -> passed=True err=none wc=28.2s
+[44/60] single-oneshot min_stack t1 -> passed=True err=none wc=26.7s
+[45/60] single-oneshot stack_using_queue t0 -> passed=True err=none wc=31.4s
+[46/60] single-oneshot stack_using_queue t1 -> passed=True err=none wc=38.9s
+[47/60] single-oneshot reverse_linked_list t0 -> passed=True err=none wc=32.3s
+[48/60] single-oneshot reverse_linked_list t1 -> passed=True err=none wc=26.4s
+[49/60] single-oneshot binary_tree_traversal t0 -> passed=True err=none wc=19.6s
+[50/60] single-oneshot binary_tree_traversal t1 -> passed=True err=none wc=11.1s
+[51/60] single-oneshot priority_queue t0 -> passed=True err=none wc=12.0s
+[52/60] single-oneshot priority_queue t1 -> passed=True err=none wc=83.6s
+[53/60] single-oneshot heapify t0 -> passed=True err=none wc=63.3s
+[54/60] single-oneshot heapify t1 -> passed=True err=none wc=27.6s
+[55/60] single-oneshot avl t0 -> passed=True err=none wc=90.1s
+[56/60] single-oneshot avl t1 -> passed=True err=none wc=150.0s
+[57/60] single-oneshot adj_list_construct t0 -> passed=False err=syntax wc=79.2s
+[58/60] single-oneshot adj_list_construct t1 -> passed=False err=syntax wc=7.4s
+[59/60] single-oneshot valid_parentheses t0 -> passed=True err=none wc=10.5s
+[60/60] single-oneshot valid_parentheses t1 -> passed=True err=none wc=15.2s
+
+=== summary ===
+  pass_rate: 0.783
+  total: 60
+ne wc=151.4s
+[56/60] single-oneshot avl t1 -> passed=True err=none wc=149.9s
+[57/60] single-oneshot adj_list_construct t0 -> passed=False err=syntax wc=7.8s
+[58/60] single-oneshot adj_list_construct t1 -> passed=False err=syntax wc=7.9s
+[59/60] single-oneshot valid_parentheses t0 -> passed=True err=none wc=13.9s
+[60/60] single-oneshot valid_parentheses t1 -> passed=True err=none wc=15.2s
+
+=== summary ===
+  pass_rate: 0.800
+  total: 60
+ue of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+loaded 30 problems from internal30
+[1/60] multi-full fib t0 -> passed=True err=none wc=198.7s
+[2/60] multi-full fib t1 -> passed=True err=none wc=296.3s
+[3/60] multi-full climb_stairs t0 -> passed=True err=none wc=363.1s
+[4/60] multi-full climb_stairs t1 -> passed=True err=none wc=380.7s
+[5/60] multi-full coin_change t0 -> passed=True err=none wc=388.7s
+[6/60] multi-full coin_change t1 -> passed=True err=none wc=405.6s
+[7/60] multi-full lcs t0 -> passed=True err=none wc=402.8s
+[8/60] multi-full lcs t1 -> passed=True err=none wc=444.0s
+[9/60] multi-full house_robber t0 -> passed=True err=none wc=366.8s
+[10/60] multi-full house_robber t1 -> passed=True err=none wc=376.5s
+[11/60] multi-full min_cost_path t0 -> passed=True err=none wc=495.5s
+[12/60] multi-full min_cost_path t1 -> passed=True err=none wc=555.9s
+[13/60] multi-full lis t0 -> passed=True err=none wc=355.3s
+[14/60] multi-full lis t1 -> passed=False err=sandbox_violation wc=358.7s
+[15/60] multi-full rod_cutting t0 -> passed=True err=none wc=435.7s
+[16/60] multi-full rod_cutting t1 -> passed=True err=none wc=348.9s
+[17/60] multi-full matrix_chain t0 -> passed=False err=wrong_answer wc=443.0s
+[18/60] multi-full matrix_chain t1 -> passed=False err=wrong_answer wc=455.9s
+[19/60] multi-full subset_sum t0 -> passed=True err=none wc=418.6s
+[20/60] multi-full subset_sum t1 -> passed=False err=wrong_answer wc=405.5s
+[21/60] multi-full topo_sort t0 -> passed=True err=none wc=412.4s
+[22/60] multi-full topo_sort t1 -> passed=True err=none wc=434.8s
+[23/60] multi-full cycle_detect t0 -> passed=True err=none wc=373.8s
+[24/60] multi-full cycle_detect t1 -> passed=True err=none wc=391.8s
+[25/60] multi-full bfs t0 -> passed=True err=none wc=375.0s
+[26/60] multi-full bfs t1 -> passed=True err=none wc=354.7s
+[27/60] multi-full dfs t0 -> passed=True err=none wc=381.1s
+[28/60] multi-full dfs t1 -> passed=True err=none wc=347.4s
+[29/60] multi-full dijkstra t0 -> passed=False err=sandbox_violation wc=421.7s
+[30/60] multi-full dijkstra t1 -> passed=False err=sandbox_violation wc=404.8s
+[31/60] multi-full bellman_ford t0 -> passed=True err=none wc=358.2s
+[32/60] multi-full bellman_ford t1 -> passed=True err=none wc=370.3s
+[33/60] multi-full connected_components t0 -> passed=True err=none wc=389.5s
+[34/60] multi-full connected_components t1 -> passed=True err=none wc=368.0s
+[35/60] multi-full scc t0 -> passed=True err=none wc=503.2s
+[36/60] multi-full scc t1 -> passed=True err=none wc=576.2s
+[37/60] multi-full unweighted_shortest t0 -> passed=True err=none wc=475.5s
+[38/60] multi-full unweighted_shortest t1 -> passed=True err=none wc=349.8s
+[39/60] multi-full grid_shortest_path t0 -> passed=False err=wrong_answer wc=584.9s
+[40/60] multi-full grid_shortest_path t1 -> passed=False err=wrong_answer wc=581.3s
+[41/60] multi-full lru_cache t0 -> passed=False err=harness_error wc=0.0s
+[42/60] multi-full lru_cache t1 -> passed=True err=none wc=517.5s
+[43/60] multi-full min_stack t0 -> passed=True err=none wc=569.9s
+[44/60] multi-full min_stack t1 -> passed=True err=none wc=467.5s
+[45/60] multi-full stack_using_queue t0 -> passed=True err=none wc=513.2s
+[46/60] multi-full stack_using_queue t1 -> passed=True err=none wc=494.4s
+[47/60] multi-full reverse_linked_list t0 -> passed=False err=harness_error wc=0.0s
+[48/60] multi-full reverse_linked_list t1 -> passed=True err=none wc=273.2s
+[49/60] multi-full binary_tree_traversal t0 -> passed=True err=none wc=349.5s
+[50/60] multi-full binary_tree_traversal t1 -> passed=True err=none wc=332.3s
+[51/60] multi-full priority_queue t0 -> passed=False err=sandbox_violation wc=478.0s
+[52/60] multi-full priority_queue t1 -> passed=False err=sandbox_violation wc=479.6s
+[53/60] multi-full heapify t0 -> passed=True err=none wc=359.0s
+[54/60] multi-full heapify t1 -> passed=True err=none wc=410.6s
+[55/60] multi-full avl t0 -> passed=True err=none wc=660.3s
+[56/60] multi-full avl t1 -> passed=True err=none wc=888.3s
+[57/60] multi-full adj_list_construct t0 -> passed=True err=none wc=601.7s
+[58/60] multi-full adj_list_construct t1 -> passed=True err=none wc=322.3s
+[59/60] multi-full valid_parentheses t0 -> passed=False err=harness_error wc=0.0s
+[60/60] multi-full valid_parentheses t1 -> passed=True err=none wc=466.7s
+
+=== summary ===
+  pass_rate: 0.783
+  total: 60
+rr=none wc=607.9s
+[57/60] multi-full adj_list_construct t0 -> passed=True err=none wc=283.9s
+[58/60] multi-full adj_list_construct t1 -> passed=False err=harness_error wc=0.0s
+[59/60] multi-full valid_parentheses t0 -> passed=True err=none wc=358.1s
+[60/60] multi-full valid_parentheses t1 -> passed=True err=none wc=592.3s
+
+=== summary ===
+  pass_rate: 0.750
+  total: 60
+value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+loaded 10 problems from internal30
+[1/10] single-oneshot fib t0 -> passed=True err=none wc=126.4s
+[2/10] single-oneshot climb_stairs t0 -> passed=True err=none wc=82.3s
+[3/10] single-oneshot coin_change t0 -> passed=True err=none wc=89.0s
+[4/10] single-oneshot lcs t0 -> passed=True err=none wc=88.1s
+[5/10] single-oneshot house_robber t0 -> passed=True err=none wc=178.5s
+[6/10] single-oneshot min_cost_path t0 -> passed=True err=none wc=63.0s
+[7/10] single-oneshot lis t0 -> passed=True err=none wc=52.5s
+[8/10] single-oneshot rod_cutting t0 -> passed=True err=none wc=38.4s
+[9/10] single-oneshot matrix_chain t0 -> passed=False err=wrong_answer wc=55.2s
+[10/10] single-oneshot subset_sum t0 -> passed=True err=none wc=54.9s
+
+=== summary ===
+  pass_rate: 0.900
+  total: 10
+er t0 -> passed=True err=none wc=86.4s
+[6/10] single-oneshot min_cost_path t0 -> passed=True err=none wc=69.3s
+[7/10] single-oneshot lis t0 -> passed=True err=none wc=40.8s
+[8/10] single-oneshot rod_cutting t0 -> passed=True err=none wc=38.4s
+[9/10] single-oneshot matrix_chain t0 -> passed=False err=wrong_answer wc=75.2s
+[10/10] single-oneshot subset_sum t0 -> passed=True err=none wc=33.4s
+
+=== summary ===
+  pass_rate: 0.900
+  total: 10
+ult value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+loaded 10 problems from internal30
+[1/10] multi-full fib t0 -> passed=True err=none wc=354.8s
+[2/10] multi-full climb_stairs t0 -> passed=True err=none wc=368.0s
+[3/10] multi-full coin_change t0 -> passed=True err=none wc=334.6s
+[4/10] multi-full lcs t0 -> passed=True err=none wc=402.9s
+[5/10] multi-full house_robber t0 -> passed=True err=none wc=371.6s
+[6/10] multi-full min_cost_path t0 -> passed=True err=none wc=505.6s
+[7/10] multi-full lis t0 -> passed=True err=none wc=380.0s
+[8/10] multi-full rod_cutting t0 -> passed=True err=none wc=398.8s
+[9/10] multi-full matrix_chain t0 -> passed=False err=wrong_answer wc=711.6s
+[10/10] multi-full subset_sum t0 -> passed=True err=none wc=614.1s
+
+=== summary ===
+  pass_rate: 0.900
+  total: 10
+ath t0 -> passed=True err=none wc=522.0s
+[7/10] multi-full lis t0 -> passed=True err=none wc=357.5s
+[8/10] multi-full rod_cutting t0 -> passed=True err=none wc=448.2s
+[9/10] multi-full matrix_chain t0 -> passed=False err=wrong_answer wc=691.2s
+[10/10] multi-full subset_sum t0 -> passed=True err=none wc=369.9s
+
+=== summary ===
+  pass_rate: 0.900
+  total: 10
+loaded 1334 trial records from C:\Users\rohit\Documents\Research Papers\Researchpaper_4\_repo_clone\results\submission-20260509-223437
+wrote tables to C:\Users\rohit\Documents\Research Papers\Researchpaper_4\_repo_clone\..\paper\tables
+loaded 1334 records from C:\Users\rohit\Documents\Research Papers\Researchpaper_4\_repo_clone\results\submission-20260509-223437
+wrote figures to C:\Users\rohit\Documents\Research Papers\Researchpaper_4\_repo_clone\..\paper\figures
+=== grid complete: /c/Users/rohit/Documents/Research Papers/Researchpaper_4/_repo_clone/results/submission-20260509-223437 ===
+loaded 1335 trial records from C:\Users\rohit\Documents\Research Papers\Researchpaper_4\_repo_clone\results\submission-20260509-223437
+wrote tables to C:\Users\rohit\Documents\Research Papers\Researchpaper_4\_repo_clone\..\paper\tables
+loaded 1335 records from C:\Users\rohit\Documents\Research Papers\Researchpaper_4\_repo_clone\results\submission-20260509-223437
+wrote figures to C:\Users\rohit\Documents\Research Papers\Researchpaper_4\_repo_clone\..\paper\figures
+=== grid complete: /c/Users/rohit/Documents/Research Papers/Researchpaper_4/_repo_clone/results/submission-20260509-223437 ===

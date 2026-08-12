@@ -1,0 +1,45 @@
+{
+  "condition": "single-oneshot",
+  "n_trials": 5,
+  "retry_budget": 2,
+  "config": {
+    "config_path": "C:\\Users\\rohit\\Documents\\Research Papers\\Researchpaper_4\\_repo_clone\\configs\\default.yaml",
+    "models": {
+      "planner": {
+        "provider": "ollama",
+        "model": "qwen2.5-coder:7b-instruct-q4_K_M"
+      },
+      "generator": {
+        "provider": "ollama",
+        "model": "qwen2.5-coder:7b-instruct-q4_K_M"
+      },
+      "reviewer": {
+        "provider": "ollama",
+        "model": "qwen2.5-coder:7b-instruct-q4_K_M"
+      },
+      "optimizer": {
+        "provider": "ollama",
+        "model": "qwen2.5-coder:7b-instruct-q4_K_M"
+      },
+      "explainer": {
+        "provider": "ollama",
+        "model": "qwen2.5-coder:7b-instruct-q4_K_M"
+      }
+    },
+    "execution": {
+      "timeout_s": 5.0
+    },
+    "run": {
+      "n_trials": 5,
+      "retry_budget": 2
+    }
+  },
+  "host": {
+    "python": "3.11.7",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel"
+  },
+  "model_planner": "qwen2.5-coder:7b-instruct-q4_K_M",
+  "model_generator": "qwen2.5-coder:7b-instruct-q4_K_M"
+}

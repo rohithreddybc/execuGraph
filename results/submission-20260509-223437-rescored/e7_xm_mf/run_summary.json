@@ -1,0 +1,10 @@
+{
+  "condition": "e7_xm_mf",
+  "trials_total": 60,
+  "raw_records": 120,
+  "duplicates_dropped": 60,
+  "n_pass": 50,
+  "pass_rate": 0.833333,
+  "pass_rate_original": 0.75,
+  "outcomes_flipped": 5
+}

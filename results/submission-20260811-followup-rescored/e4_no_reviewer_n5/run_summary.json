@@ -1,0 +1,10 @@
+{
+  "condition": "e4_no_reviewer_n5",
+  "trials_total": 150,
+  "raw_records": 150,
+  "duplicates_dropped": 0,
+  "n_pass": 118,
+  "pass_rate": 0.786667,
+  "pass_rate_original": 0.786667,
+  "outcomes_flipped": 0
+}

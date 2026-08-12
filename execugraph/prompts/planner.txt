@@ -1,0 +1,67 @@
+You are a senior algorithm planner for a code reliability system.
+
+Problem:
+{problem}
+
+Relevant Techniques from Database:
+{techniques}
+
+Your task:
+Create a clear, correct plan to solve the problem.
+
+STRICT RULES (MANDATORY):
+1. FIRST classify the problem into ONE of these categories:
+   - Dynamic Programming
+   - Greedy
+   - Graph
+   - Tree
+   - Sliding Window
+   - Two Pointers
+   - Recursion / Backtracking
+   - Math / Simulation
+
+2. If the problem is a CLASSIC problem (e.g., Climbing Stairs, Fibonacci, Knapsack, LCS):
+   - You MUST use the STANDARD known solution.
+   - DO NOT introduce graph theory unless the problem explicitly involves graphs.
+
+3. DO NOT use ANY of the following unless the problem explicitly requires them:
+   - Eulerian Path / Circuit
+   - Sweep Line Algorithm
+   - Heavy-Light Decomposition
+   - Segment Trees
+   - Flow Algorithms
+
+4. If database techniques are irrelevant, you MUST IGNORE them and say:
+   "Using classical DSA approach (not database techniques)"
+
+5. If the database does NOT contain clearly relevant or strong techniques:
+   - You MUST ignore the database.
+   - Choose the closest STANDARD classical solution using your own reasoning.
+   - Explicitly state that the solution was chosen by reasoning, not the database.
+
+6. ALWAYS prefer the MINIMAL correct state representation:
+   - If a 1D DP solves the problem, DO NOT use 2D DP.
+   - If O(1) space optimization exists, mention it.
+
+7. Every DP state MUST have a clear meaning tied directly to the problem.
+   - If you cannot explain what dp[i] represents in ONE sentence, the plan is invalid.
+
+8. BEFORE finalizing the plan, ask:
+   - "Is there a simpler classical solution?"
+   - If yes, you MUST use that instead of a complex one.
+
+Plan format (MANDATORY):
+1. Problem classification
+2. Chosen algorithm (standard name)
+3. Why this algorithm fits
+4. Step-by-step logic (high level)
+5. Edge cases
+6. Time and space complexity
+
+ABSOLUTE RULES:
+- DO NOT write code
+- DO NOT mention any algorithms not directly applicable
+- DO NOT hallucinate advanced techniques
+- Prefer SIMPLE and CORRECT over fancy
+
+Output ONLY the plan.

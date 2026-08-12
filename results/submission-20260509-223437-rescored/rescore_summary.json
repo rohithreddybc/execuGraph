@@ -1,0 +1,176 @@
+{
+  "runs": {
+    "e1_mf": {
+      "condition": "e1_mf",
+      "trials_total": 150,
+      "raw_records": 150,
+      "duplicates_dropped": 0,
+      "n_pass": 123,
+      "pass_rate": 0.82,
+      "pass_rate_original": 0.766667,
+      "outcomes_flipped": 8
+    },
+    "e1_so": {
+      "condition": "e1_so",
+      "trials_total": 150,
+      "raw_records": 150,
+      "duplicates_dropped": 0,
+      "n_pass": 116,
+      "pass_rate": 0.773333,
+      "pass_rate_original": 0.733333,
+      "outcomes_flipped": 6
+    },
+    "e1_sr": {
+      "condition": "e1_sr",
+      "trials_total": 150,
+      "raw_records": 150,
+      "duplicates_dropped": 0,
+      "n_pass": 135,
+      "pass_rate": 0.9,
+      "pass_rate_original": 0.833333,
+      "outcomes_flipped": 10
+    },
+    "e2_he_mf": {
+      "condition": "e2_he_mf",
+      "trials_total": 64,
+      "raw_records": 64,
+      "duplicates_dropped": 0,
+      "n_pass": 55,
+      "pass_rate": 0.859375,
+      "pass_rate_original": 0.578125,
+      "outcomes_flipped": 18
+    },
+    "e2_he_so": {
+      "condition": "e2_he_so",
+      "trials_total": 64,
+      "raw_records": 64,
+      "duplicates_dropped": 0,
+      "n_pass": 36,
+      "pass_rate": 0.5625,
+      "pass_rate_original": 0.546875,
+      "outcomes_flipped": 1
+    },
+    "e3_apps_mf": {
+      "condition": "e3_apps_mf",
+      "trials_total": 50,
+      "raw_records": 90,
+      "duplicates_dropped": 40,
+      "n_pass": 11,
+      "pass_rate": 0.22,
+      "pass_rate_original": 0.1,
+      "outcomes_flipped": 6
+    },
+    "e3_apps_so": {
+      "condition": "e3_apps_so",
+      "trials_total": 50,
+      "raw_records": 50,
+      "duplicates_dropped": 0,
+      "n_pass": 10,
+      "pass_rate": 0.2,
+      "pass_rate_original": 0.06,
+      "outcomes_flipped": 7
+    },
+    "e4_no_optimizer": {
+      "condition": "e4_no_optimizer",
+      "trials_total": 60,
+      "raw_records": 60,
+      "duplicates_dropped": 0,
+      "n_pass": 50,
+      "pass_rate": 0.833333,
+      "pass_rate_original": 0.766667,
+      "outcomes_flipped": 4
+    },
+    "e4_no_planner": {
+      "condition": "e4_no_planner",
+      "trials_total": 60,
+      "raw_records": 60,
+      "duplicates_dropped": 0,
+      "n_pass": 52,
+      "pass_rate": 0.866667,
+      "pass_rate_original": 0.8,
+      "outcomes_flipped": 4
+    },
+    "e4_no_reviewer": {
+      "condition": "e4_no_reviewer",
+      "trials_total": 60,
+      "raw_records": 60,
+      "duplicates_dropped": 0,
+      "n_pass": 50,
+      "pass_rate": 0.833333,
+      "pass_rate_original": 0.766667,
+      "outcomes_flipped": 4
+    },
+    "e4_rag_on": {
+      "condition": "e4_rag_on",
+      "trials_total": 60,
+      "raw_records": 60,
+      "duplicates_dropped": 0,
+      "n_pass": 50,
+      "pass_rate": 0.833333,
+      "pass_rate_original": 0.766667,
+      "outcomes_flipped": 4
+    },
+    "e5_rb0": {
+      "condition": "e5_rb0",
+      "trials_total": 60,
+      "raw_records": 60,
+      "duplicates_dropped": 0,
+      "n_pass": 46,
+      "pass_rate": 0.766667,
+      "pass_rate_original": 0.733333,
+      "outcomes_flipped": 2
+    },
+    "e5_rb2": {
+      "condition": "e5_rb2",
+      "trials_total": 60,
+      "raw_records": 60,
+      "duplicates_dropped": 0,
+      "n_pass": 50,
+      "pass_rate": 0.833333,
+      "pass_rate_original": 0.766667,
+      "outcomes_flipped": 4
+    },
+    "e7_xm_mf": {
+      "condition": "e7_xm_mf",
+      "trials_total": 60,
+      "raw_records": 120,
+      "duplicates_dropped": 60,
+      "n_pass": 50,
+      "pass_rate": 0.833333,
+      "pass_rate_original": 0.75,
+      "outcomes_flipped": 5
+    },
+    "e7_xm_so": {
+      "condition": "e7_xm_so",
+      "trials_total": 60,
+      "raw_records": 101,
+      "duplicates_dropped": 41,
+      "n_pass": 50,
+      "pass_rate": 0.833333,
+      "pass_rate_original": 0.8,
+      "outcomes_flipped": 2
+    },
+    "e9_l26_mf": {
+      "condition": "e9_l26_mf",
+      "trials_total": 10,
+      "raw_records": 20,
+      "duplicates_dropped": 10,
+      "n_pass": 9,
+      "pass_rate": 0.9,
+      "pass_rate_original": 0.9,
+      "outcomes_flipped": 0
+    },
+    "e9_l26_so": {
+      "condition": "e9_l26_so",
+      "trials_total": 10,
+      "raw_records": 16,
+      "duplicates_dropped": 6,
+      "n_pass": 9,
+      "pass_rate": 0.9,
+      "pass_rate_original": 0.9,
+      "outcomes_flipped": 0
+    }
+  },
+  "dedup_policy": "last-wins",
+  "llm_invoked": false
+}

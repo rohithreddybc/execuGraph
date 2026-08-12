@@ -1,0 +1,10 @@
+{
+  "condition": "e2_he_mf",
+  "trials_total": 64,
+  "raw_records": 64,
+  "duplicates_dropped": 0,
+  "n_pass": 55,
+  "pass_rate": 0.859375,
+  "pass_rate_original": 0.578125,
+  "outcomes_flipped": 18
+}

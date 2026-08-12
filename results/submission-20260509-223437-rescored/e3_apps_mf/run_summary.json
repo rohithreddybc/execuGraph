@@ -1,0 +1,10 @@
+{
+  "condition": "e3_apps_mf",
+  "trials_total": 50,
+  "raw_records": 90,
+  "duplicates_dropped": 40,
+  "n_pass": 11,
+  "pass_rate": 0.22,
+  "pass_rate_original": 0.1,
+  "outcomes_flipped": 6
+}

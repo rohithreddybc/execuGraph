@@ -1,0 +1,26 @@
+# Fallback config for users without a local GPU. Requires HUGGINGFACEHUB_API_TOKEN.
+# Note: HF Inference API has rate limits; expect higher variance.
+
+models:
+  planner:
+    provider: hf
+    model: Qwen/Qwen3-4B-Instruct-2507
+  generator:
+    provider: hf
+    model: Qwen/Qwen2.5-Coder-7B-Instruct
+  reviewer:
+    provider: hf
+    model: Qwen/Qwen3-4B-Instruct-2507
+  optimizer:
+    provider: hf
+    model: Qwen/Qwen2.5-Coder-7B-Instruct
+  explainer:
+    provider: hf
+    model: Qwen/Qwen3-4B-Instruct-2507
+
+execution:
+  timeout_s: 5.0
+
+run:
+  n_trials: 1
+  retry_budget: 2

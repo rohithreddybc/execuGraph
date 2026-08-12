@@ -1,0 +1,39 @@
+# Supplementary "latest 2026" condition: Qwen3-Coder-30B-A3B-Instruct.
+#
+# This is currently (May 2026) the strongest agentic-code-tuned open-weight
+# model that runs on a 6 GB-VRAM laptop. Mixture-of-Experts: 30 B total
+# parameters but only 3.3 B active per token, q4_K_M (~19 GB on disk).
+#
+# On the reference RTX 4050 6 GB / 16 GB DDR5 system the model spills
+# ~13 GB to system RAM via Ollama's automatic offload, yielding
+# ~270 s per multi-full trial — too slow for the full grid but acceptable
+# for a small "latest-model evidence" sample.
+#
+# This config is consumed by the E9 step of run_full_grid.sh, which runs
+# multi-full vs single-oneshot on a 10-problem stratified subset of
+# internal-30 (1 trial) and reports the result as a supplementary row in
+# Section V Table 13.
+
+models:
+  planner:
+    provider: ollama
+    model: qwen3-coder:30b-a3b-q4_K_M
+  generator:
+    provider: ollama
+    model: qwen3-coder:30b-a3b-q4_K_M
+  reviewer:
+    provider: ollama
+    model: qwen3-coder:30b-a3b-q4_K_M
+  optimizer:
+    provider: ollama
+    model: qwen3-coder:30b-a3b-q4_K_M
+  explainer:
+    provider: ollama
+    model: qwen3-coder:30b-a3b-q4_K_M
+
+execution:
+  timeout_s: 8.0
+
+run:
+  n_trials: 1
+  retry_budget: 2

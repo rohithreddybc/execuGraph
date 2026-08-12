@@ -1,0 +1,229 @@
+[2026-08-10 22:58:18] ======================================================================
+[2026-08-10 22:58:18] driver start  repo=C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results
+[2026-08-10 22:58:18] python=3.11.7  cwd=C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results
+[2026-08-10 22:58:20] START e2_he_sr: SR on HumanEval: recommended config, never externally validated
+[2026-08-10 22:58:20]       -m execugraph.runner.cli --config C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results\configs\default.yaml --output C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results\results\submission-20260811-followup\e2_he_sr --condition single-retry --benchmark humaneval --n-trials 1 --retry-budget 2
+[2026-08-10 23:28:05]       | [163/164] single-retry humaneval_162 t0 -> passed=False err=sandbox_violation wc=14.7s
+[2026-08-10 23:28:05]       | [164/164] single-retry humaneval_163 t0 -> passed=False err=runtime wc=16.5s
+[2026-08-10 23:28:05]       | 
+[2026-08-10 23:28:05]       | === summary ===
+[2026-08-10 23:28:05]       |   pass_rate: 0.817
+[2026-08-10 23:28:05]       |   total: 164
+[2026-08-10 23:28:05] DONE  e2_he_sr in 29.7 min  pass_rate=0.8170731707317073
+[2026-08-10 23:28:05] START e3_apps_sr: SR on APPS-introductory
+[2026-08-10 23:28:05]       -m execugraph.runner.cli --config C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results\configs\default.yaml --output C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results\results\submission-20260811-followup\e3_apps_sr --condition single-retry --benchmark apps_intro --n-trials 1 --retry-budget 2
+[2026-08-10 23:49:36]       | [49/50] single-retry apps_intro_048 t0 -> passed=False err=syntax wc=32.1s
+[2026-08-10 23:49:36]       | [50/50] single-retry apps_intro_049 t0 -> passed=True err=none wc=11.0s
+[2026-08-10 23:49:36]       | 
+[2026-08-10 23:49:36]       | === summary ===
+[2026-08-10 23:49:36]       |   pass_rate: 0.240
+[2026-08-10 23:49:36]       |   total: 50
+[2026-08-10 23:49:36] DONE  e3_apps_sr in 21.5 min  pass_rate=0.24
+[2026-08-10 23:49:36] START e7_xm_sr: SR on DeepSeek backbone: completes the cross-model row
+[2026-08-10 23:49:36]       -m execugraph.runner.cli --config C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results\configs\crossmodel.yaml --output C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results\results\submission-20260811-followup\e7_xm_sr --condition single-retry --benchmark internal30 --n-trials 2 --retry-budget 2
+[2026-08-11 00:02:47]       | [59/60] single-retry valid_parentheses t0 -> passed=True err=none wc=7.4s
+[2026-08-11 00:02:47]       | [60/60] single-retry valid_parentheses t1 -> passed=True err=none wc=7.1s
+[2026-08-11 00:02:47]       | 
+[2026-08-11 00:02:47]       | === summary ===
+[2026-08-11 00:02:47]       |   pass_rate: 0.867
+[2026-08-11 00:02:47]       |   total: 60
+[2026-08-11 00:02:47] DONE  e7_xm_sr in 13.2 min  pass_rate=0.8666666666666667
+[2026-08-11 00:02:47] START e5_rb1: Retry budget 1: interior point for the sweep
+[2026-08-11 00:02:47]       -m execugraph.runner.cli --config C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results\configs\default.yaml --output C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results\results\submission-20260811-followup\e5_rb1 --condition multi-full --benchmark internal30 --n-trials 2 --retry-budget 1
+[2026-08-11 00:56:14]       | [59/60] multi-full valid_parentheses t0 -> passed=True err=none wc=51.1s
+[2026-08-11 00:56:14]       | [60/60] multi-full valid_parentheses t1 -> passed=True err=none wc=51.2s
+[2026-08-11 00:56:14]       | 
+[2026-08-11 00:56:14]       | === summary ===
+[2026-08-11 00:56:14]       |   pass_rate: 0.717
+[2026-08-11 00:56:14]       |   total: 60
+[2026-08-11 00:56:14] DONE  e5_rb1 in 53.4 min  pass_rate=0.7166666666666667
+[2026-08-11 00:56:14] START e4_no_planner_n5: Planner ablation at N=5, matching the headline baseline
+[2026-08-11 00:56:14]       -m execugraph.runner.cli --config C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results\configs\default.yaml --output C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results\results\submission-20260811-followup\e4_no_planner_n5 --condition multi-no-planner --benchmark internal30 --n-trials 5 --retry-budget 2
+[2026-08-11 02:37:26]       | [149/150] multi-full valid_parentheses t3 -> passed=True err=none wc=36.3s
+[2026-08-11 02:37:26]       | [150/150] multi-full valid_parentheses t4 -> passed=True err=none wc=35.9s
+[2026-08-11 02:37:26]       | 
+[2026-08-11 02:37:26]       | === summary ===
+[2026-08-11 02:37:26]       |   pass_rate: 0.867
+[2026-08-11 02:37:26]       |   total: 150
+[2026-08-11 02:37:26] DONE  e4_no_planner_n5 in 101.2 min  pass_rate=0.8666666666666667
+[2026-08-11 02:37:26] START e4_no_reviewer_n5: Reviewer ablation at N=5
+[2026-08-11 02:37:26]       -m execugraph.runner.cli --config C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results\configs\default.yaml --output C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results\results\submission-20260811-followup\e4_no_reviewer_n5 --condition multi-no-reviewer --benchmark internal30 --n-trials 5 --retry-budget 2
+[2026-08-11 04:45:33]       | [149/150] multi-full valid_parentheses t3 -> passed=True err=none wc=44.7s
+[2026-08-11 04:45:33]       | [150/150] multi-full valid_parentheses t4 -> passed=True err=none wc=46.3s
+[2026-08-11 04:45:33]       | 
+[2026-08-11 04:45:33]       | === summary ===
+[2026-08-11 04:45:33]       |   pass_rate: 0.787
+[2026-08-11 04:45:33]       |   total: 150
+[2026-08-11 04:45:33] DONE  e4_no_reviewer_n5 in 128.1 min  pass_rate=0.7866666666666666
+[2026-08-11 04:45:33] START e4_no_optimizer_n5: Optimizer ablation at N=5
+[2026-08-11 04:45:33]       -m execugraph.runner.cli --config C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results\configs\default.yaml --output C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results\results\submission-20260811-followup\e4_no_optimizer_n5 --condition multi-no-optimizer --benchmark internal30 --n-trials 5 --retry-budget 2
+[2026-08-11 06:54:37]       | [149/150] multi-full valid_parentheses t3 -> passed=True err=none wc=43.2s
+[2026-08-11 06:54:37]       | [150/150] multi-full valid_parentheses t4 -> passed=True err=none wc=45.1s
+[2026-08-11 06:54:37]       | 
+[2026-08-11 06:54:37]       | === summary ===
+[2026-08-11 06:54:37]       |   pass_rate: 0.787
+[2026-08-11 06:54:37]       |   total: 150
+[2026-08-11 06:54:37] DONE  e4_no_optimizer_n5 in 129.1 min  pass_rate=0.7866666666666666
+[2026-08-11 06:54:37] START e4_rag_on_n5: Retrieval ablation at N=5
+[2026-08-11 06:54:37]       -m execugraph.runner.cli --config C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results\configs\default.yaml --output C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results\results\submission-20260811-followup\e4_rag_on_n5 --condition rag-on --benchmark internal30 --n-trials 5 --retry-budget 2
+[2026-08-11 09:00:01] ======================================================================
+[2026-08-11 09:00:01] driver start  repo=C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results
+[2026-08-11 09:00:01] python=3.11.7  cwd=C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results
+[2026-08-11 09:00:04] SKIP  e2_he_sr (already complete, pass_rate=0.8170731707317073)
+[2026-08-11 09:00:04] SKIP  e3_apps_sr (already complete, pass_rate=0.24)
+[2026-08-11 09:00:04] SKIP  e7_xm_sr (already complete, pass_rate=0.8666666666666667)
+[2026-08-11 09:00:04] START e2_he_so_164: SO on the full 164-problem HumanEval, to match the SR run's coverage
+[2026-08-11 09:00:04]       -m execugraph.runner.cli --config C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results\configs\default.yaml --output C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results\results\submission-20260811-followup\e2_he_so_164 --condition single-oneshot --benchmark humaneval --n-trials 1 --retry-budget 0
+[2026-08-11 09:19:57]       | [149/150] multi-full valid_parentheses t3 -> passed=True err=none wc=52.7s
+[2026-08-11 09:19:57]       | [150/150] multi-full valid_parentheses t4 -> passed=True err=none wc=50.3s
+[2026-08-11 09:19:57]       | 
+[2026-08-11 09:19:57]       | === summary ===
+[2026-08-11 09:19:57]       |   pass_rate: 0.787
+[2026-08-11 09:19:57]       |   total: 150
+[2026-08-11 09:19:57] DONE  e4_rag_on_n5 in 145.3 min  pass_rate=0.7866666666666666
+[2026-08-11 09:19:57] driver finished: 8/8 stages complete in 621.6 min
+[2026-08-11 09:19:57] wrote C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results\results\submission-20260811-followup\ALL_STAGES_COMPLETE.json
+[2026-08-11 09:20:57] ======================================================================
+[2026-08-11 09:20:57] driver start  repo=C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results
+[2026-08-11 09:20:57] python=3.11.7  cwd=C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results
+[2026-08-11 09:20:59] SKIP  e2_he_sr (already complete, pass_rate=0.8170731707317073)
+[2026-08-11 09:20:59] SKIP  e3_apps_sr (already complete, pass_rate=0.24)
+[2026-08-11 09:20:59] SKIP  e7_xm_sr (already complete, pass_rate=0.8666666666666667)
+[2026-08-11 09:20:59] START e2_he_so_164: SO on the full 164-problem HumanEval, to match the SR run's coverage
+[2026-08-11 09:20:59]       -m execugraph.runner.cli --config C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results\configs\default.yaml --output C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results\results\submission-20260811-followup\e2_he_so_164 --condition single-oneshot --benchmark humaneval --n-trials 1 --retry-budget 0
+[2026-08-11 09:27:32]       | [163/164] single-oneshot humaneval_162 t0 -> passed=False err=sandbox_violation wc=4.1s
+[2026-08-11 09:27:32]       | [164/164] single-oneshot humaneval_163 t0 -> passed=False err=runtime wc=4.8s
+[2026-08-11 09:27:32]       | 
+[2026-08-11 09:27:32]       | === summary ===
+[2026-08-11 09:27:32]       |   pass_rate: 0.561
+[2026-08-11 09:27:32]       |   total: 164
+[2026-08-11 09:27:32] DONE  e2_he_so_164 in 27.5 min  pass_rate=0.5609756097560976
+[2026-08-11 09:27:32] START e2_he_mf_164: MF on the full 164-problem HumanEval, to match the SR run's coverage
+[2026-08-11 09:27:32]       -m execugraph.runner.cli --config C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results\configs\default.yaml --output C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results\results\submission-20260811-followup\e2_he_mf_164 --condition multi-full --benchmark humaneval --n-trials 1 --retry-budget 2
+[2026-08-11 09:27:34]       | [163/164] single-oneshot humaneval_162 t0 -> passed=False err=sandbox_violation wc=4.2s
+[2026-08-11 09:27:34]       | [164/164] single-oneshot humaneval_163 t0 -> passed=False err=runtime wc=4.5s
+[2026-08-11 09:27:34]       | 
+[2026-08-11 09:27:34]       | === summary ===
+[2026-08-11 09:27:34]       |   pass_rate: 0.561
+[2026-08-11 09:27:34]       |   total: 164
+[2026-08-11 09:27:34] DONE  e2_he_so_164 in 6.6 min  pass_rate=0.5609756097560976
+[2026-08-11 09:27:34] START e2_he_mf_164: MF on the full 164-problem HumanEval, to match the SR run's coverage
+[2026-08-11 09:27:34]       -m execugraph.runner.cli --config C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results\configs\default.yaml --output C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results\results\submission-20260811-followup\e2_he_mf_164 --condition multi-full --benchmark humaneval --n-trials 1 --retry-budget 2
+[2026-08-11 12:31:12]       | [163/164] multi-full humaneval_162 t0 -> passed=False err=sandbox_violation wc=65.2s
+[2026-08-11 12:31:12]       | [164/164] multi-full humaneval_163 t0 -> passed=False err=runtime wc=71.2s
+[2026-08-11 12:31:12]       | 
+[2026-08-11 12:31:12]       | === summary ===
+[2026-08-11 12:31:12]       |   pass_rate: 0.774
+[2026-08-11 12:31:12]       |   total: 164
+[2026-08-11 12:31:12] DONE  e2_he_mf_164 in 183.7 min  pass_rate=0.774390243902439
+[2026-08-11 12:31:12] SKIP  e5_rb1 (already complete, pass_rate=0.7166666666666667)
+[2026-08-11 12:31:12] SKIP  e4_no_planner_n5 (already complete, pass_rate=0.8666666666666667)
+[2026-08-11 12:31:12] SKIP  e4_no_reviewer_n5 (already complete, pass_rate=0.7866666666666666)
+[2026-08-11 12:31:12] SKIP  e4_no_optimizer_n5 (already complete, pass_rate=0.7866666666666666)
+[2026-08-11 12:31:12] SKIP  e4_rag_on_n5 (already complete, pass_rate=0.7866666666666666)
+[2026-08-11 12:31:12] driver finished: 10/10 stages complete in 211.1 min
+[2026-08-11 12:31:12] wrote C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results\results\submission-20260811-followup\ALL_STAGES_COMPLETE.json
+[2026-08-11 12:32:29]       | [163/164] multi-full humaneval_162 t0 -> passed=False err=sandbox_violation wc=61.5s
+[2026-08-11 12:32:29]       | [164/164] multi-full humaneval_163 t0 -> passed=False err=runtime wc=50.0s
+[2026-08-11 12:32:29]       | 
+[2026-08-11 12:32:29]       | === summary ===
+[2026-08-11 12:32:29]       |   pass_rate: 0.787
+[2026-08-11 12:32:29]       |   total: 164
+[2026-08-11 12:32:29] DONE  e2_he_mf_164 in 184.9 min  pass_rate=0.7865853658536586
+[2026-08-11 12:32:29] SKIP  e5_rb1 (already complete, pass_rate=0.7166666666666667)
+[2026-08-11 12:32:29] SKIP  e4_no_planner_n5 (already complete, pass_rate=0.8666666666666667)
+[2026-08-11 12:32:29] SKIP  e4_no_reviewer_n5 (already complete, pass_rate=0.7866666666666666)
+[2026-08-11 12:32:29] SKIP  e4_no_optimizer_n5 (already complete, pass_rate=0.7866666666666666)
+[2026-08-11 12:32:29] SKIP  e4_rag_on_n5 (already complete, pass_rate=0.7866666666666666)
+[2026-08-11 12:32:29] driver finished: 10/10 stages complete in 191.5 min
+[2026-08-11 12:32:29] wrote C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results\results\submission-20260811-followup\ALL_STAGES_COMPLETE.json
+[2026-08-11 13:00:01] ======================================================================
+[2026-08-11 13:00:01] driver start  repo=C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results
+[2026-08-11 13:00:01] python=3.11.7  cwd=C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results
+[2026-08-11 13:00:03] SKIP  e2_he_sr (already complete, pass_rate=0.8170731707317073)
+[2026-08-11 13:00:03] SKIP  e3_apps_sr (already complete, pass_rate=0.24)
+[2026-08-11 13:00:03] SKIP  e7_xm_sr (already complete, pass_rate=0.8666666666666667)
+[2026-08-11 13:00:03] SKIP  e2_he_so_164 (already complete, pass_rate=0.5609756097560976)
+[2026-08-11 13:00:03] SKIP  e2_he_mf_164 (already complete, pass_rate=0.7865853658536586)
+[2026-08-11 13:00:03] SKIP  e5_rb1 (already complete, pass_rate=0.7166666666666667)
+[2026-08-11 13:00:03] SKIP  e4_no_planner_n5 (already complete, pass_rate=0.8666666666666667)
+[2026-08-11 13:00:03] SKIP  e4_no_reviewer_n5 (already complete, pass_rate=0.7866666666666666)
+[2026-08-11 13:00:03] SKIP  e4_no_optimizer_n5 (already complete, pass_rate=0.7866666666666666)
+[2026-08-11 13:00:03] SKIP  e4_rag_on_n5 (already complete, pass_rate=0.7866666666666666)
+[2026-08-11 13:00:03] driver finished: 10/10 stages complete in 0.0 min
+[2026-08-11 13:00:03] wrote C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results\results\submission-20260811-followup\ALL_STAGES_COMPLETE.json
+[2026-08-11 13:30:01] ======================================================================
+[2026-08-11 13:30:01] driver start  repo=C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results
+[2026-08-11 13:30:01] python=3.11.7  cwd=C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results
+[2026-08-11 13:30:03] SKIP  e2_he_sr (already complete, pass_rate=0.8170731707317073)
+[2026-08-11 13:30:03] SKIP  e3_apps_sr (already complete, pass_rate=0.24)
+[2026-08-11 13:30:03] SKIP  e7_xm_sr (already complete, pass_rate=0.8666666666666667)
+[2026-08-11 13:30:03] SKIP  e2_he_so_164 (already complete, pass_rate=0.5609756097560976)
+[2026-08-11 13:30:03] SKIP  e2_he_mf_164 (already complete, pass_rate=0.7865853658536586)
+[2026-08-11 13:30:03] SKIP  e5_rb1 (already complete, pass_rate=0.7166666666666667)
+[2026-08-11 13:30:03] SKIP  e4_no_planner_n5 (already complete, pass_rate=0.8666666666666667)
+[2026-08-11 13:30:03] SKIP  e4_no_reviewer_n5 (already complete, pass_rate=0.7866666666666666)
+[2026-08-11 13:30:03] SKIP  e4_no_optimizer_n5 (already complete, pass_rate=0.7866666666666666)
+[2026-08-11 13:30:03] SKIP  e4_rag_on_n5 (already complete, pass_rate=0.7866666666666666)
+[2026-08-11 13:30:03] driver finished: 10/10 stages complete in 0.0 min
+[2026-08-11 13:30:03] wrote C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results\results\submission-20260811-followup\ALL_STAGES_COMPLETE.json
+[2026-08-11 14:00:01] ======================================================================
+[2026-08-11 14:00:01] driver start  repo=C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results
+[2026-08-11 14:00:01] python=3.11.7  cwd=C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results
+[2026-08-11 14:00:03] SKIP  e2_he_sr (already complete, pass_rate=0.8170731707317073)
+[2026-08-11 14:00:03] SKIP  e3_apps_sr (already complete, pass_rate=0.24)
+[2026-08-11 14:00:03] SKIP  e7_xm_sr (already complete, pass_rate=0.8666666666666667)
+[2026-08-11 14:00:03] SKIP  e2_he_so_164 (already complete, pass_rate=0.5609756097560976)
+[2026-08-11 14:00:03] SKIP  e2_he_mf_164 (already complete, pass_rate=0.7865853658536586)
+[2026-08-11 14:00:03] SKIP  e5_rb1 (already complete, pass_rate=0.7166666666666667)
+[2026-08-11 14:00:03] SKIP  e4_no_planner_n5 (already complete, pass_rate=0.8666666666666667)
+[2026-08-11 14:00:03] SKIP  e4_no_reviewer_n5 (already complete, pass_rate=0.7866666666666666)
+[2026-08-11 14:00:03] SKIP  e4_no_optimizer_n5 (already complete, pass_rate=0.7866666666666666)
+[2026-08-11 14:00:03] SKIP  e4_rag_on_n5 (already complete, pass_rate=0.7866666666666666)
+[2026-08-11 14:00:03] driver finished: 10/10 stages complete in 0.0 min
+[2026-08-11 14:00:03] wrote C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results\results\submission-20260811-followup\ALL_STAGES_COMPLETE.json
+[2026-08-11 14:30:01] ======================================================================
+[2026-08-11 14:30:01] driver start  repo=C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results
+[2026-08-11 14:30:01] python=3.11.7  cwd=C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results
+[2026-08-11 14:30:03] SKIP  e2_he_sr (already complete, pass_rate=0.8170731707317073)
+[2026-08-11 14:30:03] SKIP  e3_apps_sr (already complete, pass_rate=0.24)
+[2026-08-11 14:30:03] SKIP  e7_xm_sr (already complete, pass_rate=0.8666666666666667)
+[2026-08-11 14:30:03] SKIP  e2_he_so_164 (already complete, pass_rate=0.5609756097560976)
+[2026-08-11 14:30:03] SKIP  e2_he_mf_164 (already complete, pass_rate=0.7865853658536586)
+[2026-08-11 14:30:03] SKIP  e5_rb1 (already complete, pass_rate=0.7166666666666667)
+[2026-08-11 14:30:03] SKIP  e4_no_planner_n5 (already complete, pass_rate=0.8666666666666667)
+[2026-08-11 14:30:03] SKIP  e4_no_reviewer_n5 (already complete, pass_rate=0.7866666666666666)
+[2026-08-11 14:30:03] SKIP  e4_no_optimizer_n5 (already complete, pass_rate=0.7866666666666666)
+[2026-08-11 14:30:03] SKIP  e4_rag_on_n5 (already complete, pass_rate=0.7866666666666666)
+[2026-08-11 14:30:03] driver finished: 10/10 stages complete in 0.0 min
+[2026-08-11 14:30:03] wrote C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results\results\submission-20260811-followup\ALL_STAGES_COMPLETE.json
+[2026-08-11 15:00:01] ======================================================================
+[2026-08-11 15:00:01] driver start  repo=C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results
+[2026-08-11 15:00:01] python=3.11.7  cwd=C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results
+[2026-08-11 15:00:03] SKIP  e2_he_sr (already complete, pass_rate=0.8170731707317073)
+[2026-08-11 15:00:03] SKIP  e3_apps_sr (already complete, pass_rate=0.24)
+[2026-08-11 15:00:03] SKIP  e7_xm_sr (already complete, pass_rate=0.8666666666666667)
+[2026-08-11 15:00:03] SKIP  e2_he_so_164 (already complete, pass_rate=0.5609756097560976)
+[2026-08-11 15:00:03] SKIP  e2_he_mf_164 (already complete, pass_rate=0.7865853658536586)
+[2026-08-11 15:00:03] SKIP  e5_rb1 (already complete, pass_rate=0.7166666666666667)
+[2026-08-11 15:00:03] SKIP  e4_no_planner_n5 (already complete, pass_rate=0.8666666666666667)
+[2026-08-11 15:00:03] SKIP  e4_no_reviewer_n5 (already complete, pass_rate=0.7866666666666666)
+[2026-08-11 15:00:03] SKIP  e4_no_optimizer_n5 (already complete, pass_rate=0.7866666666666666)
+[2026-08-11 15:00:03] SKIP  e4_rag_on_n5 (already complete, pass_rate=0.7866666666666666)
+[2026-08-11 15:00:03] driver finished: 10/10 stages complete in 0.0 min
+[2026-08-11 15:00:03] wrote C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results\results\submission-20260811-followup\ALL_STAGES_COMPLETE.json
+[2026-08-11 15:30:01] ======================================================================
+[2026-08-11 15:30:01] driver start  repo=C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results
+[2026-08-11 15:30:01] python=3.11.7  cwd=C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results
+[2026-08-11 15:30:03] SKIP  e2_he_sr (already complete, pass_rate=0.8170731707317073)
+[2026-08-11 15:30:03] SKIP  e3_apps_sr (already complete, pass_rate=0.24)
+[2026-08-11 15:30:03] SKIP  e7_xm_sr (already complete, pass_rate=0.8666666666666667)
+[2026-08-11 15:30:03] SKIP  e2_he_so_164 (already complete, pass_rate=0.5609756097560976)
+[2026-08-11 15:30:03] SKIP  e2_he_mf_164 (already complete, pass_rate=0.7865853658536586)
+[2026-08-11 15:30:03] SKIP  e5_rb1 (already complete, pass_rate=0.7166666666666667)
+[2026-08-11 15:30:03] SKIP  e4_no_planner_n5 (already complete, pass_rate=0.8666666666666667)
+[2026-08-11 15:30:03] SKIP  e4_no_reviewer_n5 (already complete, pass_rate=0.7866666666666666)
+[2026-08-11 15:30:03] SKIP  e4_no_optimizer_n5 (already complete, pass_rate=0.7866666666666666)
+[2026-08-11 15:30:03] SKIP  e4_rag_on_n5 (already complete, pass_rate=0.7866666666666666)
+[2026-08-11 15:30:03] driver finished: 10/10 stages complete in 0.0 min
+[2026-08-11 15:30:03] wrote C:\Users\rohit\Documents\Research Papers\Researchpaper_4\ExecuGraph-updated\ExecuGraph\Code_results\results\submission-20260811-followup\ALL_STAGES_COMPLETE.json

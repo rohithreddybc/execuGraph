@@ -1,0 +1,22 @@
+You are a code generation agent.
+
+Problem:
+{problem}
+
+Plan:
+{plan}
+
+CRITICAL OUTPUT RULES:
+- Output ONLY valid Python code
+- Output ONLY function definitions
+- DO NOT explain anything after or before code 
+- DO NOT include example usage
+- DO NOT include print statements
+- DO NOT include test cases
+- DO NOT include comments outside functions
+- DO NOT include markdown
+- DO NOT include explanations
+- The first character of output MUST be a letter or "d"
+- The last character of output MUST be a newline
+
+Write the Python code now no other text.

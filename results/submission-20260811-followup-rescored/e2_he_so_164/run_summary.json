@@ -1,0 +1,10 @@
+{
+  "condition": "e2_he_so_164",
+  "trials_total": 164,
+  "raw_records": 217,
+  "duplicates_dropped": 53,
+  "n_pass": 92,
+  "pass_rate": 0.560976,
+  "pass_rate_original": 0.560976,
+  "outcomes_flipped": 0
+}

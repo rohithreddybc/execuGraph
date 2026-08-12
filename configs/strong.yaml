@@ -1,0 +1,34 @@
+# Stronger generator: Qwen3-Coder-30B-A3B-Instruct (MoE; 3B active params).
+#
+# Released July 2025 by the Qwen team; Apache-2.0. Total weights at q4_K_M
+# are ~17 GB, which exceeds the RTX 4050's 6 GB VRAM, so Ollama will split
+# layers between GPU and system RAM (~16 GB available). End-to-end latency
+# is roughly 3-5x default.yaml, but the model substantially outperforms
+# 7B-class generators on harder DSA / APPS items.
+#
+# Use for: a one-off "best-numbers" run when wall-clock is not the bottleneck,
+# or for the harder-problem subset of HumanEval / APPS-introductory.
+
+models:
+  planner:
+    provider: ollama
+    model: qwen3:4b-instruct-2507-q4_K_M
+  generator:
+    provider: ollama
+    model: qwen3-coder:30b-a3b-instruct-q4_K_M
+  reviewer:
+    provider: ollama
+    model: qwen3:4b-instruct-2507-q4_K_M
+  optimizer:
+    provider: ollama
+    model: qwen3-coder:30b-a3b-instruct-q4_K_M
+  explainer:
+    provider: ollama
+    model: qwen3:4b-instruct-2507-q4_K_M
+
+execution:
+  timeout_s: 8.0
+
+run:
+  n_trials: 3
+  retry_budget: 2

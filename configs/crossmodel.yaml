@@ -1,0 +1,38 @@
+# Cross-model condition: DeepSeek-Coder-V2-Lite-Instruct (16B MoE, 2.4B active).
+#
+# Different vendor (DeepSeek) than the Qwen-family default. Single-backbone
+# (one model serves all five agent roles) for VRAM efficiency. The 16B-MoE-
+# with-2.4B-active design is what makes this practical on a 6 GB VRAM laptop:
+# only the active experts compute per token, so inference is fast enough
+# (~10-20 tok/s) to make a multi-trial cross-model row feasible.
+#
+# Note: we evaluated GPT-OSS-20B (OpenAI's 2025 Apache-2.0 release) as a
+# candidate but at 20B dense parameters its inference latency on 6 GB VRAM
+# (~600 s/multi-full trial) is incompatible with the experimental grid.
+# DeepSeek-Coder-V2-Lite gives equivalent vendor diversity at ~5x the speed.
+#
+# Pull: ollama pull deepseek-coder-v2:16b-lite-instruct-q4_K_M  (~10 GB)
+
+models:
+  planner:
+    provider: ollama
+    model: deepseek-coder-v2:16b-lite-instruct-q4_K_M
+  generator:
+    provider: ollama
+    model: deepseek-coder-v2:16b-lite-instruct-q4_K_M
+  reviewer:
+    provider: ollama
+    model: deepseek-coder-v2:16b-lite-instruct-q4_K_M
+  optimizer:
+    provider: ollama
+    model: deepseek-coder-v2:16b-lite-instruct-q4_K_M
+  explainer:
+    provider: ollama
+    model: deepseek-coder-v2:16b-lite-instruct-q4_K_M
+
+execution:
+  timeout_s: 6.0
+
+run:
+  n_trials: 3
+  retry_budget: 2

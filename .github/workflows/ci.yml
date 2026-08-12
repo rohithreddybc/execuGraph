@@ -1,0 +1,30 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install package + dev deps
+        run: |
+          python -m pip install --upgrade pip
+          # Install only the dependencies needed for the unit-test surface
+          # (no LLM backends, no Streamlit). LangGraph is required for the
+          # workflow, but the routing test imports the standalone module.
+          pip install pytest pyyaml requests numpy scipy datasets
+      - name: Lint (ruff)
+        run: |
+          pip install ruff
+          ruff check execugraph tests
+      - name: Run unit tests (no LLM required)
+        run: |
+          pip install -e .
+          pytest -q tests/unit

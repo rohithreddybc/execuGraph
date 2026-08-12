@@ -1,0 +1,10 @@
+{
+  "condition": "e9_l26_so",
+  "trials_total": 10,
+  "raw_records": 16,
+  "duplicates_dropped": 6,
+  "n_pass": 9,
+  "pass_rate": 0.9,
+  "pass_rate_original": 0.9,
+  "outcomes_flipped": 0
+}
