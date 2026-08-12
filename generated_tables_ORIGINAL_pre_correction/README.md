@@ -1,4 +1,4 @@
-# Pre-correction table fragments (superseded — do not cite)
+# Pre-correction table fragments (superseded, do not cite)
 
 These fragments were produced by the original table generator, before the
 execution-sandbox defect described in the paper (Section "A Sandbox Defect and

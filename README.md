@@ -1,197 +1,139 @@
 # ExecuGraph
 
-A multi-agent, execution-grounded framework for backend code synthesis with Large Language Models.
+Code and data for the paper *Execution Feedback, Not Role Decomposition: A
+Controlled Comparison of Single- and Multi-Agent LLM Code Synthesis*.
 
-> ExecuGraph decomposes code generation into specialized agents (Planner, Code Generator, Logical Reviewer, Evaluator, Optimizer, Explainer) coordinated by a deterministic LangGraph workflow over typed shared state. **Acceptance is decided by sandboxed execution, not by static review.** A bounded retry loop drives recovery from runtime failures.
+ExecuGraph splits code generation across six agents (Planner, Code Generator,
+Logical Reviewer, Evaluator, Optimizer, Explainer) wired together by a compiled
+LangGraph workflow over typed shared state. Whether a program is accepted is
+decided by running it in a sandbox, never by a model's opinion of it, and a
+bounded retry loop feeds runtime errors back to the Generator.
 
-This repository accompanies the paper *ExecuGraph: A Multi-Agent, Execution-Grounded Framework for Reliable Backend Code Synthesis with Large Language Models* (IEEE Access submission).
+The framework exists mainly as a measuring instrument. One codebase collapses
+by configuration into a single-agent one-shot run, a single-agent
+execution-retry run, and the full multi-agent pipeline, so the contribution of
+role decomposition can be separated from the contribution of execution feedback
+instead of being confounded with it.
 
----
+## What we found
+
+On the full 164-problem HumanEval suite, which is the only benchmark here with
+enough paired problems to resolve small differences:
+
+| Configuration | LLM calls | Pass rate |
+|---|---|---|
+| One-shot, single sample | 1.0 | 57.6% |
+| One-shot, best of 5 samples | 5.0 | 57.9% |
+| Single-agent execution-retry | 1.5 | 81.7% |
+| Full multi-agent | 5.3 | 80.5% |
+
+Execution feedback is worth about 24 points. Adding five more agents on top of
+it is worth `-1.2` points (95% CI `[-7.3, +4.9]`, exact Wilcoxon p = 0.76) at
+roughly 3.6x the model calls. Drawing five independent samples instead, at five
+times the call budget, is worth 0.4 points, so the gain is feedback rather than
+extra sampling.
+
+The negative result is the more reliable half. Both retry conditions see stderr
+from the tests that also grade them, which inflates any comparison against
+one-shot, but affects multi-agent and single-retry equally and so leaves the
+comparison between those two clean.
 
 ## Quick start
 
 ```bash
-# 1. Python deps
 pip install -e .
 
-# 2. Local LLM backend (default; recommended)
-#    Install Ollama from https://ollama.com/download, then:
-ollama pull qwen3:4b-instruct-2507-q4_K_M       # planner / reviewer / explainer
-ollama pull qwen2.5-coder:7b-instruct-q4_K_M    # generator / optimizer
+# Local model backend. Install Ollama from https://ollama.com/download, then:
+ollama pull qwen2.5-coder:7b-instruct-q4_K_M
 
-# 3. Smoke test the harness without running an LLM
+# Check the harness without touching a model
 pytest -q tests/unit
 
-# 4. Run a small experiment (3 problems, 1 trial)
-python scripts/run_experiment.py \
+# Small run: 3 problems, 1 trial
+python -m execugraph.runner.cli \
     --config configs/default.yaml \
     --output results/smoke \
     --condition multi-full \
     --n-trials 1 --limit 3
 ```
 
-For the full IEEE Access experiment grid (~30–45 hours on an RTX 4050 6 GB):
+## Reproducing the paper
+
+Every number in the paper comes from the logs in `results/` by way of one
+script. Nothing is typed in by hand.
 
 ```bash
-RUN_ID=submission ./scripts/run_full_grid.sh
-python -m execugraph.analysis.build_tables  results/submission --out ../paper/tables
-python -m execugraph.analysis.build_figures results/submission --out ../paper/figures
+python scripts/build_all_tables.py \
+    --results results/submission-20260509-223437-rescored \
+              results/submission-20260811-followup-rescored \
+    --out generated_tables
 ```
 
-To preview what the paper looks like *before* running the grid (using
-synthetic data, with a DRAFT watermark):
+That writes one `.tex` fragment per table plus `all_numbers.json`, which is the
+machine-readable version used to check the prose. Running it twice gives byte
+identical output.
+
+To re-run experiments from scratch, see `REPRODUCIBILITY.md`. The full grid is
+3,260 trials and takes roughly 30 to 45 hours on an RTX 4050 with 6 GB of VRAM.
+Every model is open weight and runs locally, so it costs nothing in API fees.
+
+## A note on the sandbox
+
+The sandbox is load bearing: it decides the dependent variable, so a bug in it
+does not just weaken isolation, it corrupts the results.
+
+The original import policy gated `__import__` against a flat allow-list. That
+looks reasonable and is wrong, because importing an allow-listed pure-Python
+module pulls in its private C accelerator: `bisect` imports `_bisect`, `heapq`
+imports `_heapq`, `io` imports `_io`. None of those roots were on the list, so
+the import failed and a textbook-correct program was recorded as a sandbox
+violation. It hit 135 of 1,335 trials, and it hit conditions unevenly, because
+a condition that emits more candidate programs has more chances to trip it.
+
+The fix pre-imports the allow-listed modules before installing the guard, then
+admits anything already loaded while refusing an explicit deny-list. Since every
+trial record stores the program it produced, correcting the results needed no
+new generation:
 
 ```bash
-./scripts/build_preview.sh        # produces ../paper_preview/main.pdf
+python scripts/rescore_trials.py \
+    --in  results/submission-20260509-223437 \
+    --out results/submission-20260509-223437-rescored
 ```
 
-See [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md) for the full per-experiment runtime estimates and exact commands.
+That replays stored artifacts through the corrected sandbox on CPU in a few
+minutes. No model is invoked, so the programs are exactly the ones the original
+runs produced and only the scoring changes.
 
----
+`tests/unit/test_sandbox.py` now includes a reference-solution control: known
+good programs that must pass, plus escapes that must fail. That test is what
+was missing, and it is why the original defect shipped.
 
-## Architecture
-
-```
-                 ┌────────────┐
-                 │  Planner   │◄──── (optional) ChromaDB technique store
-                 └──────┬─────┘
-                        │ structured plan
-                        ▼
-                 ┌────────────┐                ┌──────────────────┐
-        ┌────────│ Generator  │───────────────►│ Logical Reviewer │  (advisory)
-        │        └──────┬─────┘                └─────────┬────────┘
-        │ retry         │ candidate code                 │ structured advisory
-        │ feedback      ▼                                ▼
-        │       ┌──────────────────────┐
-        │       │     Evaluator        │ ◄── deterministic OR LLM-generated tests
-        │       │  subprocess sandbox  │ ◄── runtime acceptance signal
-        │       └────────┬─────────────┘
-        │                │
-        ▼                ▼
-   fail / budget   pass
-        │                │
-        │                ▼
-        │         ┌────────────┐
-        │         │ Optimizer  │  (re-validates before accepting)
-        │         └─────┬──────┘
-        │               ▼
-        │         ┌────────────┐
-        └────────►│ Explainer  │
-                  └────────────┘
-```
-
-The same graph reduces by configuration to **single-oneshot** (Generator + Evaluator only, retry budget 0) and **single-with-retry** (a Reflexion-style baseline). This makes per-component contributions measurable in isolation.
-
----
-
-## Repository layout
+## Layout
 
 ```
-.
-├── execugraph/              # the package
-│   ├── agents/              # Planner, Generator, Reviewer, Evaluator, Optimizer, Explainer
-│   ├── graph/               # LangGraph workflow + standalone routing predicate
-│   ├── benchmarks/          # internal30, APPS-introductory, HumanEval loaders
-│   ├── execution/           # subprocess sandbox + code sanitisation
-│   ├── llm/                 # provider-agnostic LLM backends (Ollama, HF)
-│   ├── memory/              # optional ChromaDB technique store
-│   ├── pipelines/           # single-oneshot, single-with-retry, multi-agent
-│   ├── runner/              # trial / batch / CLI runner
-│   ├── analysis/            # paired Wilcoxon, McNemar, table generators
-│   ├── prompts/             # prompt templates for each agent
-│   └── ui/                  # Streamlit interactive demo
-├── configs/                 # YAML configs per backend / model
-├── tests/                   # pytest unit tests (no LLM needed)
-├── scripts/                 # run_experiment.py, run_full_grid.sh
-├── results/example_run/     # SYNTHETIC artifact for harness smoke testing
-├── pyproject.toml
-├── Dockerfile
-└── REPRODUCIBILITY.md
+execugraph/        framework: agents, workflow, sandbox, benchmarks, analysis
+configs/           one YAML per experimental condition
+results/           per-trial JSONL logs behind every reported number
+generated_tables/  result tables, regenerated from those logs
+scripts/           experiment driver, re-scoring tool, table generator
+tests/             44 unit tests plus integration smoke tests
+dataset/           the curated 30-problem benchmark as JSONL
 ```
 
-The `Prompts/` directory at the top level (legacy) and the loose top-level `agents/`, `graph/`, `memory/`, `util/`, `app.py`, `test_*.py` files are **deprecated**: their behaviour was migrated into the `execugraph/` package and the `tests/` suite. They are retained for one release for backwards-compatibility readers, then will be deleted.
+## Benchmarks
 
----
+- **Internal-30**: 30 data structures and algorithms problems, 10 each of
+  dynamic programming, graph algorithms, and data structures, with a documented
+  selection rationale and deterministic tests. Defined in
+  `execugraph/benchmarks/internal30.py` and exported to `dataset/`.
+- **HumanEval**: all 164 problems, official tests, run verbatim in the sandbox.
+- **APPS-introductory**: a 50-problem subset, seed 42.
 
-## Configuration
+## Citation
 
-LLM backends are selected via YAML:
+See `CITATION.cff`.
 
-| File | Backend | Use case |
-|-|-|-|
-| `configs/default.yaml` | Qwen3-4B + Qwen2.5-Coder-7B (Ollama, q4) | Default; matches paper headline numbers |
-| `configs/strong.yaml` | + Qwen3-Coder-30B-A3B MoE generator | Opt-in stronger generator (slower) |
-| `configs/crossmodel.yaml` | Llama-3.1-8B + DeepSeek-Coder-V2-Lite-16B | Cross-model row (independent vendor family) |
-| `configs/hf_fallback.yaml` | HuggingFace Inference API | No local GPU; rate-limited |
-
-The selection is honoured by every entrypoint (`scripts/run_experiment.py`, `execugraph-run`, the Streamlit UI).
-
----
-
-## Dataset
-
-The curated **internal-30** benchmark (30 DSA problems, 125 deterministic test
-cases) is the single source of truth for the paper's headline tables. It lives
-in `execugraph/benchmarks/internal30.py` and is also published as a standalone
-HuggingFace dataset for convenience:
-
-- **HuggingFace:** <https://huggingface.co/datasets/anonymousreview111/execugraph-internal30>
-- **Local copy:** [`dataset/internal30.jsonl`](dataset/internal30.jsonl) (regenerate with `python scripts/export_dataset.py`)
-
-```python
-from datasets import load_dataset
-ds = load_dataset("anonymousreview111/execugraph-internal30", split="train")
-```
-
-To refresh the published dataset after editing the benchmark:
-
-```bash
-huggingface-cli login   # token of the dataset-owning account
-python scripts/push_dataset.py \
-    --repo-id anonymousreview111/execugraph-internal30 --card dataset/README.md
-```
-
----
-
-## Reproducing the paper tables
-
-Every numeric cell in the paper traces to a JSON line in `results/<run>/trials.jsonl`. To regenerate:
-
-```bash
-RUN_ID=submission ./scripts/run_full_grid.sh
-python -m execugraph.analysis.build_tables results/submission --out ../paper/tables
-cd ../paper && latexmk -pdf main.tex
-```
-
-Cells in the paper that are currently `\todo{}` correspond to runs that have not yet been executed; running the grid above on the reference hardware will replace them automatically.
-
----
-
-## Testing
-
-```bash
-pytest -q tests/unit          # 31 tests, no LLM required
-ruff check execugraph tests   # lint
-```
-
-CI on GitHub Actions runs the lint + unit-test surface on every push.
-
----
-
-## Authors
-
-Author names and affiliations are withheld for double-blind review and will be
-released on acceptance.
-
----
-
-## Citing
-
-This repository is an anonymized supplement for double-blind review. Citation
-metadata will be released on acceptance.
-
----
-
-## License
+## Licence
 
 Apache-2.0.

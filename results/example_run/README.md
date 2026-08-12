@@ -1,4 +1,4 @@
-# Synthetic example artifact — DO NOT cite in the paper
+# Synthetic example artifact, DO NOT cite in the paper
 
 This directory contains a `trials.jsonl` produced by a deterministic
 random generator for the sole purpose of exercising

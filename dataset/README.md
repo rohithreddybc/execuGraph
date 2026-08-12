@@ -34,7 +34,7 @@ accepted aliases), a documented selection rationale, and a set of
 | Category | Problems | Notes |
 |---|---|---|
 | Dynamic Programming (`dp`) | 10 | Fibonacci, coin change, LCS, LIS, edit-distance-style recurrences |
-| Graph Algorithms (`graph`) | 10 | BFS/DFS, topological sort, Dijkstra, Bellman–Ford, SCC, connectivity |
+| Graph Algorithms (`graph`) | 10 | BFS/DFS, topological sort, Dijkstra, Bellman, Ford, SCC, connectivity |
 | Data Structures (`ds`) | 10 | LRU cache, min-stack, heap/priority queue, AVL, linked-list, traversal |
 
 - 27 problems are originally designed; 3 are adapted from the
