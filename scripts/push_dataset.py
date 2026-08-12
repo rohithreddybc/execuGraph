@@ -8,7 +8,7 @@ release copy). Authenticate first with ``huggingface-cli login`` (or set
 Examples::
 
     # anonymized review mirror
-    python scripts/push_dataset.py --repo-id anonymousreview111/execugraph-internal30 \
+    python scripts/push_dataset.py --repo-id Rohithreddybc/llm-code-generation-benchmark \
         --card dataset/README_anon.md
 
     # named release mirror

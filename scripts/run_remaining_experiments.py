@@ -40,7 +40,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
-RESULTS = REPO / "results" / "submission-20260811-followup"
+RESULTS = REPO / "results" / "grid-followup"
 LOG = RESULTS / "driver.log"
 DONE_MARKER = RESULTS / "ALL_STAGES_COMPLETE.json"
 

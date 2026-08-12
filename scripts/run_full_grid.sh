@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Optimised full experiment grid for the IEEE Access submission.
+# Full experiment grid.
 #
 # Tuned for an RTX 4050 Laptop GPU (6 GB VRAM, 16 GB RAM):
 #   - Single-backbone configs (default.yaml, crossmodel.yaml) keep one

@@ -27,8 +27,8 @@ every run, replacing the three inconsistent conventions used previously.
 Usage
 -----
     python scripts/rescore_trials.py \
-        --in  results/submission-20260509-223437 \
-        --out results/submission-20260509-223437-rescored
+        --in  results/grid-main \
+        --out results/grid-main-rescored
 """
 
 from __future__ import annotations

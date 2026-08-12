@@ -10,7 +10,10 @@ readme = "README.md"
 requires-python = ">=3.10,<3.13"
 license = {text = "Apache-2.0"}
 authors = [
-  {name = "Anonymous Author(s) (withheld for double-blind review)"},
+  {name = "L. Sai Deekshith"},
+  {name = "A. Jothi Prabha"},
+  {name = "Rohith Reddy Bellibatlu"},
+  {name = "Manpreet Singh", email = "manni@bu.edu"},
 ]
 dependencies = [
   "langchain>=0.3,<2",

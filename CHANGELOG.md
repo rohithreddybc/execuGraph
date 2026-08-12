@@ -1,182 +1,65 @@
 # Changelog
 
-## Matched-compute sampling control + referee-driven revision (2026-08-11, later)
-
-### New experiment: the control two referees asked for
-`e2_he_so_bo5` -- one-shot at N=5 on all 164 HumanEval problems (820 trials),
-filtered through the same sandbox. Best-of-5 accepts a problem if any of the
-five samples passes, at ~5x the call budget of pass@1.
-
-| Configuration | LLM calls | Pass % |
-|---|---|---|
-| One-shot, single sample | 1.0 | 57.6 |
-| One-shot, best of 5 | 5.0 | 57.9 |
-| Single-retry | 1.5 | 81.7 |
-| Multi-full | 5.3 | 80.5 |
-
-Five samples buy +0.4 pp; execution feedback buys +24.1 pp at under a third of
-the calls. On 161 of 164 problems all five samples agree, because the Generator
-decodes at temperature 0.0 -- repeated sampling reproduces the same program.
-The gain is feedback, not extra lottery tickets. Scope stated honestly in the
-paper: temperature 0.0 makes this a weak sampling baseline by construction.
-
-### Manuscript, after two independent referee reviews
-Roughly 60 fixes. The substantive ones:
-
-- A **fabricated pass-rate** (`lis` 40.0% MF) that anchored a whole mechanistic
-  subsection; the table says 100/100/100. Section re-derived.
-- Holm-adjusted p-values in Section 4.7 were pre-revision (0.249/0.624/0.624 ->
-  0.375/0.375/0.547), contradicting the paper's own table.
-- The RAG ablation paragraph quoted superseded N=2 numbers.
-- Cross-model N reported as 4; it is 2. "Eight trial flips" -> four.
-- Five wrong cost ratios, including "sub-linear token scaling" which is in fact
-  super-linear (11.9x tokens on 5.3x calls).
-- Section 6.3 recommended multi-full for DeepSeek on grounds its own table
-  refutes (MF 83.3 = SO 83.3, below SR 86.7).
-- Abstract cut 378 -> ~245 words; retitled to state the finding.
-- Declarations block added (Springer requirement; its absence blocks at
-  editorial screening). Funding, competing interests, CRediT, data availability.
-- Sandbox-correction section moved out of the Results lead and reframed as
-  harness validation rather than confession.
-- Limitations grouped from thirteen items into five themes.
-- Notation: unused delta in the transition tuple, MAX/B retry-cap mismatch,
-  "acyclic" claim on a graph with a retry back-edge.
-- Two figures were never cited in text.
-- Added Olausson et al. (self-repair vs sampling) and Kapoor et al. (agent
-  evaluation without cost-matched baselines) -- both verified.
-
-### Verification
-43 pp, 0 LaTeX errors, 0 undefined references, 44 references. 44 unit tests,
-ruff clean, table regeneration byte-identical, all 32 hard-coded TikZ figure
-values checked against `all_numbers.json`. 3,260 trials across 28 runs.
-
-## Follow-up experiment grid (2026-08-11)
-
-Closes the gap the sandbox-correction pass could not: single-retry, the
-configuration the paper recommends, had never been run on any external
-benchmark or on the second backbone. 1,262 new trials, ~10.5 h unattended.
-
-### Added runs
-- `e2_he_sr`, `e2_he_so_164`, `e2_he_mf_164` - all three conditions on the
-  FULL 164-problem HumanEval suite. Earlier work used problems 0-63 and
-  described the subset as index-stratified with seed 42; it was simply the
-  first 64 in benchmark order. Running the full suite removes the sampling
-  step, the incorrect description, and the reference to a manifest file
-  (`benchmarks/humaneval_64.json`) that never existed.
-- `e3_apps_sr`, `e7_xm_sr` - single-retry on APPS-introductory and DeepSeek.
-- `e5_rb1` - retry budget 1, giving the sweep an interior point.
-- `e4_*_n5` - all four ablations re-run at N=5 to match the headline baseline.
-
-### Headline result
-HumanEval at n=164 is the only adequately powered comparison in the study:
-
-| Contrast | delta | 95% CI | exact p | Holm p |
-|---|---|---|---|---|
-| SR - SO | +25.6 pp | [+18.9, +32.3] | <0.0001 | <0.0001 |
-| MF - SO | +24.4 pp | [+15.2, +32.9] | <0.0001 | <0.0001 |
-| MF - SR | -1.2 pp  | [-7.3, +4.9]   | 0.762   | 0.762   |
-
-Execution feedback accounts for the gain; multi-agent decomposition adds
-nothing measurable on top of it at ~5x the LLM calls. The MF-SR contrast is
-the only powered comparison free of the test-visibility confound, since both
-conditions retry against the same tests.
-
-### Negative controls, and an unplanned finding
-`-Reviewer`, `-Optimizer` and `+RAG` cannot alter acceptance by construction,
-so at N=5 they are replications of multi-full. All three returned exactly
-78.7% (118/150) while differing at the level of individual trials and
-generated programs, putting the within-session aggregate noise floor near
-zero. The May baseline sits 3.3 pp higher and shares byte-identical code on
-only 56/150 trials, so cross-session model-server drift exceeds within-session
-noise. Against the replication level, `-Planner` gains +8.0 pp - stronger than
-the earlier N=2 ablations implied - though the per-problem paired test remains
-inconclusive at 6 discordant problems (exact p = 0.156). Both are reported.
-
-The retry sweep is non-monotonic (76.7 / 71.7 / 83.3). Since a larger budget
-can only add regeneration attempts to a failing trial, the dip is a direct
-display of run-to-run variance at N=2 and is reported as such.
-
-### Tooling
-- `scripts/run_remaining_experiments.py` - idempotent unattended driver.
-- `scripts/build_all_tables.py` - now reads several results trees, emits
-  Table 15 (HumanEval paired stats), and records the replication analysis in
-  `all_numbers.json`. Regeneration verified byte-identical.
-- Fixed an unescaped `%` in generated table headers that silently commented
-  out the end of each header row.
-- Table 1 rewritten with wrapping columns; it had been overfull by 148 pt with
-  the acceptance-predicate column running off the page. Added MapCoder and
-  Self-Debug rows.
-
-Totals: 2,440 trials across 27 runs, all deterministic-tested. 44 unit tests,
-ruff clean, LaTeX builds with 0 errors and 0 undefined references.
-
-## Sandbox correction and re-scoring (post-DSM review)
-
-### Fixed, execution sandbox
-
-The import guard gated `__import__` against a flat allow-list. Importing an
-allow-listed pure-Python module transitively imports its private C accelerator
-(`bisect` -> `_bisect`, `heapq` -> `_heapq`, `io` -> `_io`), whose root is not
-on the list, so the import was refused and the trial was recorded as
-`sandbox_violation`. Correct programs were scored as failures: 135 of 1,335
-records (10.1%) in the original grid, at rates that differed by condition.
-
-The corrected child pre-imports allow-listed modules before installing the
-guard, then admits any import whose root is allow-listed or already loaded and
-refuses an explicit deny-list unconditionally (`random` pulls `os`, so
-transitive loading alone cannot be the criterion).
-
-Also fixed, all verified by test:
-
-- `subprocess.run` now passes an explicit minimal `env=`; previously the child
-  inherited the parent environment, so generated code could read `HF_TOKEN`.
-- `sys` and `io` are served as restricted shims. The real modules expose
-  `sys.modules` (reachable route to `os`) and `io.open` (which is
-  `builtins.open` under another name, and did write files).
-- `resource.setrlimit(RLIMIT_AS, 1 GiB)` is applied where available. It is
-  unavailable on Windows; the code degrades gracefully and the paper now states
-  the platform caveat instead of claiming the ceiling.
-- `input` is retained (it reads only the harness-supplied stdin buffer);
-  deleting it failed every stdin-driven APPS candidate for no isolation gain.
-- Removed 47 lines of dead `_CHILD_PRELUDE` containing non-functional
-  placeholder logic and a comment describing behaviour that never happened.
+## 0.4.0, sampling control and matched-N ablations
 
 ### Added
+- **Matched-compute sampling control.** One-shot at N=5 on all 164 HumanEval
+  problems, filtered through the same sandbox, giving a best-of-5 baseline at
+  roughly the multi-agent call budget. Best-of-5 returns 57.9% against 57.6%
+  for a single sample. On 161 of 164 problems all five samples agree, because
+  the Generator decodes at temperature 0.0, so repeated sampling reproduces the
+  same program. Additional compute alone does not reproduce the execution
+  feedback effect.
+- Single-retry extended to HumanEval, APPS-introductory, and the DeepSeek
+  backbone, so every benchmark now covers all three primary conditions.
+- HumanEval extended from a 64-problem subset to the full 164-problem suite for
+  all conditions, which is what makes the paired analysis adequately powered.
+- Retry budget 1, giving the sweep an interior point.
+- All four ablations re-run at N=5 to match the headline baseline's trial count.
+- `scripts/run_remaining_experiments.py`, an idempotent unattended driver.
 
-- `scripts/rescore_trials.py`, replays every stored candidate program through
-  the corrected sandbox using the same Evaluator entry point. No LLM is
-  invoked; trial records persist the generated code, so the grid needed
-  re-scoring rather than re-running. Applies one deduplication rule
-  (last-wins per `(problem_id, trial)`) uniformly, replacing three
-  inconsistent conventions; 157 duplicate rows from resumed runs are dropped,
-  leaving 1,178 distinct trials.
-- `scripts/build_all_tables.py`, emits all twelve result tables plus
-  `all_numbers.json`. The previous generator covered only tab3-tab6 and left
-  the rest as `	odo{}` stubs, so five tables in earlier drafts had no
-  traceable source. Statistics corrected: exact Wilcoxon rather than the normal
-  approximation (invalid at four discordant pairs, where it reported p=0.083
-  against an exact 0.125), cluster bootstrap over problems, Holm-Bonferroni
-  across the three pooled contrasts.
-- `tests/unit/test_sandbox.py`, reference-solution control. Known-correct
-  programs using `bisect`, `heapq`, `collections`, `functools`, `itertools`,
-  and `re` must pass; escapes (env leak, `sys.modules` route to `os`,
-  `io.open` write) must fail. This is the test whose absence let the original
-  defect ship. 34 -> 44 unit tests.
+### Changed
+- `scripts/build_all_tables.py` reads several results trees, emits every table
+  in the paper plus `all_numbers.json`, and records the replication analysis.
+  Regeneration is byte-identical across runs.
+- Results directories renamed from timestamps to descriptive names
+  (`grid-main`, `grid-followup`, and their re-scored counterparts).
 
-### Result
+### Fixed
+- Unescaped `%` in generated table headers, which silently commented out the
+  remainder of each header row.
 
-Pass-rates after re-scoring (original -> corrected): internal-30 SO
-73.3 -> 77.3, SR 83.3 -> 90.0, MF 76.7 -> 82.0; HumanEval SO 54.7 -> 56.2,
-MF 57.8 -> 85.9; APPS-intro SO 6.0 -> 20.0, MF 10.0 -> 22.0. `dijkstra` moved
-from 0% in every condition to 100%, it had been failing on its `heapq`
-import, not on the model. Pre-correction fragments are retained under
-`generated_tables_ORIGINAL_pre_correction/` so the correction is auditable.
+## 0.3.0, sandbox correction and re-scoring
 
- (code)
+### Fixed
+- **Execution sandbox import policy.** The guard gated `__import__` against a
+  flat allow-list, which refused allow-listed modules reached through their
+  private C accelerators (`bisect` to `_bisect`, `heapq` to `_heapq`, `io` to
+  `_io`) and recorded correct programs as sandbox violations. It affected 135 of
+  1,335 trials and did so unevenly across conditions, since a condition that
+  emits more candidate programs has more chances to trip it. The corrected
+  policy pre-imports allow-listed modules before installing the guard, then
+  admits anything already loaded while refusing an explicit deny-list.
+- The child process inherited the parent environment, so generated code could
+  read provider credentials. It now receives an explicitly constructed minimal
+  environment.
+- `sys` and `io` are served as restricted shims. The real modules expose
+  `sys.modules`, which reaches any loaded module, and `io.open`, which is
+  `open` under another name and could write files.
+- `resource.setrlimit(RLIMIT_AS)` applied where available. It does not exist on
+  Windows, so the platform caveat is documented rather than the guarantee.
+- `input` retained: it reads only the harness-supplied stdin buffer, and
+  removing it failed every stdin-driven candidate for no isolation benefit.
+- Removed 47 lines of dead prelude code containing non-functional placeholders.
 
-All code-side changes for the IEEE Access revision are listed here.
-The paper-side change log lives at `paper/CHANGELOG.md`.
-The overall summary is at `../CHANGELOG_overall.md`.
+### Added
+- `scripts/rescore_trials.py`, which replays stored candidate programs through
+  the corrected sandbox using the same Evaluator path. No model is invoked,
+  since every trial record persists the program it produced. Applies one
+  deduplication rule (last wins per problem and trial) uniformly.
+- Reference-solution control in `tests/unit/test_sandbox.py`: known-good
+  programs that must pass, and escape attempts that must fail. Its absence is
+  why the original defect went unnoticed. Unit tests 34 to 44.
 
 ## 0.2.3, Preview build, RAG seeded, Streamlit ported, more benchmarks, lint clean
 
@@ -220,7 +103,7 @@ The overall summary is at `../CHANGELOG_overall.md`.
 - `configs/strong.yaml`, opt-in stronger generator: `qwen3-coder:30b-a3b-instruct-q4_K_M` (MoE, 3B active). Slower (RAM-spilling on 6 GB VRAM) but substantially better on harder DSA / APPS items.
 - All open-weight, Apache-2.0 / Llama-3 community-licence models. **Zero paid-API cost** for the entire experimental grid.
 
-## 0.2.0, IEEE Access revision
+## 0.2.0, major revision
 
 ### Added
 - New `execugraph/` package replacing the loose top-level modules.
@@ -245,7 +128,7 @@ The overall summary is at `../CHANGELOG_overall.md`.
 - `.github/workflows/ci.yml`, ruff + unit tests on push/PR.
 - `Dockerfile`, Python 3.11 base; recommends `--network=host` so the container reaches the host Ollama on `localhost:11434`.
 - `REPRODUCIBILITY.md`, exact commands, hardware spec, model digests, runtime estimates per experiment.
-- `scripts/run_full_grid.sh`, one-shot driver for the full IEEE Access grid (~30 to 45 h on RTX 4050).
+- `scripts/run_full_grid.sh`, one-shot driver for the full experiment grid (~30 to 45 h on RTX 4050).
 - `configs/{default,hf_fallback,deepseek}.yaml`, backend / model presets.
 - `results/example_run/`, SYNTHETIC trial JSONL (clearly labelled) so the table-generation pipeline can be exercised offline.
 

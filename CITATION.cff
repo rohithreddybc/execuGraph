@@ -1,19 +1,50 @@
 cff-version: 1.2.0
 title: >-
-  ExecuGraph: A Multi-Agent, Execution-Grounded Framework for Reliable
-  Backend Code Synthesis with Large Language Models
+  ExecuGraph: a framework for isolating execution feedback from multi-agent
+  role decomposition in LLM code synthesis
 message: >-
-  Anonymized for double-blind review. Author and citation metadata will be
-  released on acceptance.
+  If you use this software or the accompanying data, please cite both the
+  software and the paper listed under preferred-citation.
 type: software
 authors:
-  - name: "Anonymous Author(s) (withheld for double-blind review)"
-repository-code: "https://github.com/anonymousreview111/execugraph"
+  - given-names: "L. Sai"
+    family-names: Deekshith
+    affiliation: >-
+      Department of Computer Science and Engineering (AI & ML),
+      Kakatiya Institute of Technology and Science, Warangal, India
+  - given-names: "A. Jothi"
+    family-names: Prabha
+    affiliation: >-
+      Department of Computer Science and Engineering,
+      Kakatiya Institute of Technology and Science, Warangal, India
+  - given-names: "Rohith Reddy"
+    family-names: Bellibatlu
+    affiliation: Independent Researcher, India
+  - given-names: Manpreet
+    family-names: Singh
+    affiliation: Boston University, Boston, MA, USA
+    email: manni@bu.edu
+repository-code: "https://github.com/rohithreddybc/execuGraph"
+license: Apache-2.0
 keywords:
-  - multi-agent systems
   - large language models
   - code generation
+  - multi-agent systems
   - execution-grounded validation
-  - software reliability
-  - retrieval-augmented generation
-license: Apache-2.0
+  - empirical software engineering
+  - reproducibility
+preferred-citation:
+  type: article
+  title: >-
+    Execution Feedback, Not Role Decomposition: A Controlled Comparison of
+    Single- and Multi-Agent LLM Code Synthesis
+  authors:
+    - given-names: "L. Sai"
+      family-names: Deekshith
+    - given-names: "A. Jothi"
+      family-names: Prabha
+    - given-names: "Rohith Reddy"
+      family-names: Bellibatlu
+    - given-names: Manpreet
+      family-names: Singh
+  year: 2026

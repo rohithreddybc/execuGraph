@@ -16,8 +16,8 @@ contains it, so the original grid and the follow-up grid combine cleanly.
 
 Usage:
     python scripts/build_all_tables.py \
-        --results results/submission-20260509-223437-rescored \
-                  results/submission-20260811-followup-rescored \
+        --results results/grid-main-rescored \
+                  results/grid-followup-rescored \
         --out generated_tables
 """
 

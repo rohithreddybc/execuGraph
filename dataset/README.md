@@ -20,7 +20,7 @@ configs:
 
 # ExecuGraph Internal-30 Benchmark
 
-> **Anonymized for double-blind review.** Author, affiliation, and citation
+> Released alongside the paper. Author, affiliation, and citation
 > metadata are withheld and will be released on acceptance.
 
 A curated suite of **30 data-structures-and-algorithms (DSA) problems** used as
@@ -73,7 +73,7 @@ comparison.
 import json
 from datasets import load_dataset
 
-ds = load_dataset("anonymousreview111/execugraph-internal30", split="train")
+ds = load_dataset("Rohithreddybc/llm-code-generation-benchmark", split="train")
 p = ds[0]
 print(p["id"], p["category"], len(p["tests"]))
 args = json.loads(p["tests"][0]["args"])        # -> e.g. [10]
